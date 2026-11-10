@@ -1,0 +1,829 @@
+{
+  "schema": "gum-mcm-execution/1",
+  "input_sha256": "59afc728a4c857f92e90e60a4ac4d9a1e4449fd3c60ce6fb1d0a1233bf13d46f",
+  "complete": true,
+  "cases": [
+    {
+      "id": "gum5_linear_1",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "-0.00161596372426",
+        "standard_uncertainty": "2.003736025",
+        "intervals": {
+          "symmetric": [
+            "-3.92727036918",
+            "3.91147603894"
+          ],
+          "shortest": [
+            "-3.97438112045",
+            "3.85306789345"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.05",
+        "twice_standard_errors": {
+          "estimate": "0.0126755700869",
+          "standard_uncertainty": "0.0044500368259",
+          "symmetric_lower": "0.0236323487542",
+          "symmetric_upper": "0.0353011518589",
+          "shortest_lower": "0.0442116037166",
+          "shortest_upper": "0.0465807826525"
+        },
+        "samples": 100000,
+        "requested_max_samples": 8000000,
+        "batches": 10,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            175447320,
+            257105625,
+            730763489,
+            466308042
+          ],
+          "uniform_draws": 400000
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/10",
+      "uncertainty_error": "149441/40000000",
+      "mean_error": "80798186213/50000000000000",
+      "elapsed_seconds": "2.092"
+    },
+    {
+      "id": "gum5_linear_2",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.000763506945702",
+        "standard_uncertainty": "2.00201434547",
+        "intervals": {
+          "symmetric": [
+            "-3.882534987",
+            "3.87755987109"
+          ],
+          "shortest": [
+            "-3.90672738596",
+            "3.85080916857"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.05",
+        "twice_standard_errors": {
+          "estimate": "0.00761785124096",
+          "standard_uncertainty": "0.00589361663008",
+          "symmetric_lower": "0.014184898618",
+          "symmetric_upper": "0.0236494545664",
+          "shortest_lower": "0.0441329149383",
+          "shortest_upper": "0.0472922877892"
+        },
+        "samples": 180000,
+        "requested_max_samples": 8000000,
+        "batches": 18,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            1471658015,
+            1700587702,
+            1803854958,
+            1797420216
+          ],
+          "uniform_draws": 720000
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/10",
+      "uncertainty_error": "201434547/100000000000",
+      "mean_error": "381753472851/500000000000000",
+      "elapsed_seconds": "1.309"
+    },
+    {
+      "id": "gum5_linear_3",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "-0.0645238571882",
+        "standard_uncertainty": "10.1280771686",
+        "intervals": {
+          "symmetric": [
+            "-16.99903311",
+            "16.9447814315"
+          ],
+          "shortest": [
+            "-16.947046439",
+            "16.98830639"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.5",
+        "twice_standard_errors": {
+          "estimate": "0.0645353091574",
+          "standard_uncertainty": "0.0765653221743",
+          "symmetric_lower": "0.120014320635",
+          "symmetric_upper": "0.079559872859",
+          "shortest_lower": "0.228588855057",
+          "shortest_upper": "0.425034378616"
+        },
+        "samples": 20000,
+        "requested_max_samples": 8000000,
+        "batches": 2,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            1317483289,
+            2124196823,
+            1591935952,
+            1467258895
+          ],
+          "uniform_draws": 80000
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/1",
+      "uncertainty_error": "208143964922194686485201189358743835819225018884066522536509206114038227/10000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "322619285941/5000000000000",
+      "elapsed_seconds": "0.151"
+    },
+    {
+      "id": "gum5_comparison_loss_1",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.0000500386388474",
+        "standard_uncertainty": "0.0000500823259886",
+        "intervals": {
+          "symmetric": [
+            "0.00000126580962906",
+            "0.000184825170684"
+          ],
+          "shortest": [
+            "0.0000000000185539773331",
+            "0.000150046434919"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.0000005",
+        "twice_standard_errors": {
+          "estimate": "0.0000000817249233393",
+          "standard_uncertainty": "0.000000111010691043",
+          "symmetric_lower": "0.000000011823813663",
+          "symmetric_upper": "0.000000499882179499",
+          "shortest_lower": "0.000000000846250446128",
+          "shortest_upper": "0.000000327481796425"
+        },
+        "samples": 1810000,
+        "requested_max_samples": 8000000,
+        "batches": 181,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            68514792,
+            1552023986,
+            1750843912,
+            1782764546
+          ],
+          "uniform_draws": 3620000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/1000000",
+      "uncertainty_error": "411629943/5000000000000000",
+      "mean_error": "193194237/5000000000000000",
+      "elapsed_seconds": "9.652"
+    },
+    {
+      "id": "gum5_comparison_loss_2",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.000149895194617",
+        "standard_uncertainty": "0.000111649953306",
+        "intervals": {
+          "symmetric": [
+            "0.00000831075180141",
+            "0.000425692695924"
+          ],
+          "shortest": [
+            "0.0000000148706040738",
+            "0.000364060777398"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.000005",
+        "twice_standard_errors": {
+          "estimate": "0.00000078379011392",
+          "standard_uncertainty": "0.000000908465022659",
+          "symmetric_lower": "0.000000188533832951",
+          "symmetric_upper": "0.00000450184156019",
+          "shortest_lower": "0.0000000272829720711",
+          "shortest_upper": "0.00000360062878936"
+        },
+        "samples": 70000,
+        "requested_max_samples": 8000000,
+        "batches": 7,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            687655698,
+            382066475,
+            162299302,
+            252981174
+          ],
+          "uniform_draws": 140000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/100000",
+      "uncertainty_error": "76722784494742410229341718281905886015458990288143106772431135263023141/500000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "104805383/1000000000000000",
+      "elapsed_seconds": "0.419"
+    },
+    {
+      "id": "gum5_comparison_loss_3",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.00254977722153",
+        "standard_uncertainty": "0.00050212192922",
+        "intervals": {
+          "symmetric": [
+            "0.00163714734922",
+            "0.00360221333905"
+          ],
+          "shortest": [
+            "0.00159565040368",
+            "0.00355043115038"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.000005",
+        "twice_standard_errors": {
+          "estimate": "0.00000100974670505",
+          "standard_uncertainty": "0.000000705260795982",
+          "symmetric_lower": "0.00000236622103497",
+          "symmetric_upper": "0.0000030444959979",
+          "shortest_lower": "0.0000049621539185",
+          "shortest_upper": "0.00000466544496637"
+        },
+        "samples": 1060000,
+        "requested_max_samples": 8000000,
+        "batches": 106,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            371752950,
+            139698745,
+            2109210053,
+            1352953086
+          ],
+          "uniform_draws": 2120000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/100000",
+      "uncertainty_error": "185925918022256755481622818989404673625586750659432264320707433212280789/500000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "22277847/100000000000000",
+      "elapsed_seconds": "5.842"
+    },
+    {
+      "id": "gum5_comparison_loss_4",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.0000500031193739",
+        "standard_uncertainty": "0.0000672769878316",
+        "intervals": {
+          "symmetric": [
+            "0.000000562481145828",
+            "0.000241209869301"
+          ],
+          "shortest": [
+            "0.00000000000403472360951",
+            "0.000185158154708"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.0000005",
+        "twice_standard_errors": {
+          "estimate": "0.0000000654620204789",
+          "standard_uncertainty": "0.000000122325153148",
+          "symmetric_lower": "0.00000000377042482471",
+          "symmetric_upper": "0.00000049897250167",
+          "shortest_lower": "0.000000000248252727671",
+          "shortest_upper": "0.000000331797100461"
+        },
+        "samples": 4130000,
+        "requested_max_samples": 8000000,
+        "batches": 413,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            334419332,
+            672013641,
+            266274386,
+            2087967378
+          ],
+          "uniform_draws": 8260000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "9/400000"
+            ],
+            [
+              "9/400000",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/1000000",
+      "uncertainty_error": "88675962314484141845726891479790306451880723993986239975635834098064079/10000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "31193739/10000000000000000",
+      "elapsed_seconds": "21.853"
+    },
+    {
+      "id": "gum5_comparison_loss_5",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.000150185328675",
+        "standard_uncertainty": "0.000120607436345",
+        "intervals": {
+          "symmetric": [
+            "0.0000290783998676",
+            "0.00047621704068"
+          ],
+          "shortest": [
+            "0.000013719519164",
+            "0.000398360462741"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.000005",
+        "twice_standard_errors": {
+          "estimate": "0.000000555050796291",
+          "standard_uncertainty": "0.000000924699768044",
+          "symmetric_lower": "0.000000308768415076",
+          "symmetric_upper": "0.000004742231857",
+          "shortest_lower": "0.000000893425126209",
+          "shortest_upper": "0.00000296613120301"
+        },
+        "samples": 160000,
+        "requested_max_samples": 8000000,
+        "batches": 16,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            2087618178,
+            2003141233,
+            380474879,
+            2039725227
+          ],
+          "uniform_draws": 320000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "9/400000"
+            ],
+            [
+              "9/400000",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/100000",
+      "uncertainty_error": "87728413060503451569232685500148389478066608394080243811072491245400117/1000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "7413147/40000000000000",
+      "elapsed_seconds": "0.901"
+    },
+    {
+      "id": "gum5_comparison_loss_6",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "0.0025497033586",
+        "standard_uncertainty": "0.000504014367317",
+        "intervals": {
+          "symmetric": [
+            "0.00169598597858",
+            "0.00365877581984"
+          ],
+          "shortest": [
+            "0.0016189292661",
+            "0.00354789123012"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.000005",
+        "twice_standard_errors": {
+          "estimate": "0.0000010464854997",
+          "standard_uncertainty": "0.000000778745316986",
+          "symmetric_lower": "0.00000189713741347",
+          "symmetric_upper": "0.00000358313704744",
+          "shortest_lower": "0.00000497601238246",
+          "shortest_upper": "0.00000481747426292"
+        },
+        "samples": 980000,
+        "requested_max_samples": 8000000,
+        "batches": 98,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            962914782,
+            1786689731,
+            1681744726,
+            1416456958
+          ],
+          "uniform_draws": 1960000,
+          "joint_distribution": "multivariate_normal",
+          "covariance": [
+            [
+              "1/40000",
+              "9/400000"
+            ],
+            [
+              "9/400000",
+              "1/40000"
+            ]
+          ],
+          "joint_sampler": "exact-LDL-binary64-normal-v1"
+        }
+      },
+      "unit": "dimensionless",
+      "reference_check_tolerance": "1/100000",
+      "uncertainty_error": "122585073088556533201836681299657339140573588383557714149694932771935011/250000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "1483207/5000000000000",
+      "elapsed_seconds": "5.388"
+    },
+    {
+      "id": "gum5_mass_calibration",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "1.23396393487",
+        "standard_uncertainty": "0.0754329756313",
+        "intervals": {
+          "symmetric": [
+            "1.08444245681",
+            "1.38340062412"
+          ],
+          "shortest": [
+            "1.08403942787",
+            "1.3829504468"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.0005",
+        "twice_standard_errors": {
+          "estimate": "0.0000889610417696",
+          "standard_uncertainty": "0.0000657077909496",
+          "symmetric_lower": "0.000254646099243",
+          "symmetric_upper": "0.000239593626601",
+          "shortest_lower": "0.000498535903911",
+          "shortest_upper": "0.00049854177635"
+        },
+        "samples": 3070000,
+        "requested_max_samples": 8000000,
+        "batches": 307,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "p",
+          "q",
+          "a",
+          "w",
+          "r"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-certified-rational",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            1885781058,
+            976971168,
+            1605189330,
+            911700181
+          ],
+          "uniform_draws": 15350000,
+          "denominator_interval": [
+            "55999550/1",
+            "72000450/1"
+          ],
+          "certificate": "exact-rectangular-support-interval-v1"
+        }
+      },
+      "unit": "mg",
+      "reference_check_tolerance": "1/1000",
+      "uncertainty_error": "358679387586974169896049935712708532836943999517834512968692217970077/156250000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "3606513/100000000000",
+      "elapsed_seconds": "40.532"
+    },
+    {
+      "id": "gum6_bromine",
+      "source_pdf_sha256": "5abfd9c6791c41857c46d84807ec51b189e4b4068f4688936cd6f495c27f8e93",
+      "passed": true,
+      "result": {
+        "estimate": "0.499949975464",
+        "standard_uncertainty": "0.0000708227235028",
+        "intervals": {
+          "symmetric": [
+            "0.499748622396",
+            "0.499999950901"
+          ],
+          "shortest": [
+            "0.499807679921",
+            "0.5"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.0000005",
+        "twice_standard_errors": {
+          "estimate": "0.000000068725440588",
+          "standard_uncertainty": "0.000000125595816295",
+          "symmetric_lower": "0.00000049924761705",
+          "symmetric_upper": "0.000000000579908040939",
+          "shortest_lower": "0.000000329874072557",
+          "shortest_upper": "0.000000000000265585501553"
+        },
+        "samples": 4500000,
+        "requested_max_samples": 8000000,
+        "batches": 450,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "x"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            578315836,
+            171083092,
+            819106514,
+            461959279
+          ],
+          "uniform_draws": 4500000
+        }
+      },
+      "unit": "fraction",
+      "reference_check_tolerance": "1/1000000",
+      "uncertainty_error": "1120453841452475599155637895150960715164062311525963411660131004633760769/10000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error": "3067/125000000000",
+      "elapsed_seconds": "13.398"
+    }
+  ]
+}

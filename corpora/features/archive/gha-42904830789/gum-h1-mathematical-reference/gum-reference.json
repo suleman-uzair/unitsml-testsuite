@@ -1,0 +1,151 @@
+{
+  "schema": "gum-h1-execution/1",
+  "input_sha256": "bbc87f945a42110d252cb69244700c4de19a45487fe235e46013d1cc3ff5d2d3",
+  "complete": true,
+  "cases": [
+    {
+      "id": "jcgm101_table10_pdf",
+      "source_pdf_sha256": "6d8548af875df112dfc5cf14eb974f5544341f4a31cbbdfc19fc5ed155d8fa20",
+      "passed": true,
+      "result": {
+        "estimate": "837.994776983",
+        "standard_uncertainty": "35.8351261896",
+        "intervals": {
+          "symmetric": [
+            "767.512305695",
+            "908.390009745"
+          ],
+          "shortest": [
+            "767.804172914",
+            "908.645370954"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.5",
+        "twice_standard_errors": {
+          "estimate": "0.0765510256139",
+          "standard_uncertainty": "0.0567628384747",
+          "symmetric_lower": "0.225259101019",
+          "symmetric_upper": "0.227662666651",
+          "shortest_lower": "0.453754709304",
+          "shortest_upper": "0.497462079441"
+        },
+        "samples": 820000,
+        "requested_max_samples": 2000000,
+        "batches": 82,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "s",
+          "d",
+          "e",
+          "f",
+          "a",
+          "t",
+          "v",
+          "b",
+          "c"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            12345,
+            23456,
+            34567,
+            45678
+          ],
+          "final_state": [
+            986866755,
+            1568950505,
+            1386371363,
+            1475481268
+          ],
+          "uniform_draws": 15938582
+        }
+      },
+      "uncertainty_error_nm": "2704758659127368046405622774889681267524842131892504207604268757439243956753/100000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error_nm": "5223017/1000000000",
+      "elapsed_seconds": "26.525"
+    },
+    {
+      "id": "gum5_table8_1_pdf",
+      "source_pdf_sha256": "da5fa8a2406cc2013eeff86d8b5e63a3647cd56410f1e58a42941c098db1a3a5",
+      "passed": true,
+      "result": {
+        "estimate": "837.930434282",
+        "standard_uncertainty": "35.7220553132",
+        "intervals": {
+          "symmetric": [
+            "767.615470203",
+            "908.114919897"
+          ],
+          "shortest": [
+            "767.617725526",
+            "908.117019003"
+          ]
+        },
+        "probability": "19/20",
+        "numerical_tolerance": "0.5",
+        "twice_standard_errors": {
+          "estimate": "0.0933378769822",
+          "standard_uncertainty": "0.0675597545153",
+          "symmetric_lower": "0.218663411725",
+          "symmetric_upper": "0.239237596752",
+          "shortest_lower": "0.425576003019",
+          "shortest_upper": "0.496837216927"
+        },
+        "samples": 670000,
+        "requested_max_samples": 2000000,
+        "batches": 67,
+        "batch_size": 10000,
+        "significant_digits": 2,
+        "guard_digits": 12,
+        "precision_convention": "significant_digits",
+        "stabilized": true,
+        "method": "adaptive_mcm",
+        "variables": [
+          "s",
+          "d",
+          "e",
+          "f",
+          "a",
+          "t",
+          "v",
+          "b",
+          "c"
+        ],
+        "engine": {
+          "name": "plurimath",
+          "version": "0.11.17",
+          "method": "JCGM101-2008-7.9.4-v1",
+          "numeric_backend": "binary64-centered-exact-polynomial",
+          "generator": "enhanced-Wichmann-Hill-C.3.3.3",
+          "initial_seeds": [
+            56789,
+            67890,
+            78901,
+            89012
+          ],
+          "final_state": [
+            138098836,
+            328137386,
+            1006053249,
+            1258637579
+          ],
+          "uniform_draws": 13023566
+        }
+      },
+      "uncertainty_error_nm": "22534999441161065929532850322561731899346574055027886651498834937800582171147/500000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_error_nm": "34782859/500000000",
+      "elapsed_seconds": "21.195"
+    }
+  ]
+}
