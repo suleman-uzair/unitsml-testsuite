@@ -64,6 +64,33 @@ plurimath `docs/pma.adoc`), frozen from plurimath/amath
 * Every row was checked on both amath engines (Ruby and native) before it
   was written; they agree on every row.
 * There are no render vectors yet: amath parses pma and does not render it.
+== corpora/features
+
+Source-pinned feature vectors (F40). `index.json` holds the seals,
+the per-family status, the comparison rules and the git blob ids of the
+preserved render/conversion vectors above.
+
+* `unitsml-quantities.json`: 39 cases executed on unitsml-ruby
+  `92b0f3481cd90e8a7b50ba9bd729363bec150a21` (0.6.14) with unitsdb gem
+  2.2.13 (data seal in `producer_source`). The kinds are exact
+  conversions (value as `n/d` plus a terminating decimal where one
+  exists), dimensions (`dimension_id`, `dimension_vector`, scale),
+  `kV*A` in the watt class, a difference, and typed refusals matched by
+  `error_class`. `source_semantics_findings` lists observed behaviour
+  that is recorded but not endorsed.
+* `gum-mcm-profiles.json`: 13 adaptive-MCM profiles (2 H1 plus 11
+  extended) from plurimath `8916961a69dc1f586e915790c4fb052b910efa86`,
+  GHA run 42904830789. Each `result` is verbatim: probability, seeds,
+  final generator state and stop metadata. Per-case `evidence_gaps`
+  mark what the producer did not supply: raw and rounded H2 profiles,
+  published reference values and last-digit gaps.
+* `archive/gha-42904830789/`: the two producer artifacts, byte for byte.
+
+Families with no exact-head evidence (series/group statistics,
+conformity, GUM adequacy/normality refusals, the plurimath `kV·A`
+evaluator path) are listed as `missing evidence` in `index.json`. They
+are not inferred. `python scripts/check_feature_corpus.py` checks the
+seals, counts, verbatim archive agreement and refusal typing.
 
 == Replay contract
 

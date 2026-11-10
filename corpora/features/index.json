@@ -1,0 +1,89 @@
+{
+ "schema": "unitsml-testsuite-feature-index/1",
+ "card": "F40",
+ "preserved_vectors": {
+  "corpora/renders/expected-renders.json": {
+   "git_blob": "77256a42e71181b7d91edb80b5f851e06ad93cf2"
+  },
+  "corpora/renders/inputs.txt": {
+   "git_blob": "c7112e749a283a6f35667439474d8ca88292d5db"
+  },
+  "corpora/conversions/expected-conversions.json": {
+   "git_blob": "3204391e8af4b6c6b27b1cdf51f95408ec8baf8a"
+  }
+ },
+ "files": {
+  "gum-mcm-profiles.json": "fc6402d921eb410a273c655e27d23e81fc422fb672aa5a5f99420611b2b82543",
+  "unitsml-quantities.json": "2cacb0b5b3c66f7c8a960b73e638b892afb86dd44ee4838371f132c2c5b60218"
+ },
+ "archive": [
+  {
+   "path": "corpora/features/archive/gha-42904830789/gum-h1-mathematical-reference/gum-reference.json",
+   "sha256": "fb1e21a687b2843ed4fbb978fc2b06e6868e36f9a5e159ef9a8230bdb61c55d0",
+   "packet_path": "handoffs/F21/gha-8916961a-final/gum-h1-mathematical-reference/gum-reference.json"
+  },
+  {
+   "path": "corpora/features/archive/gha-42904830789/gum-extended-mathematical-references/gum-profiles-reference.json",
+   "sha256": "9136864751bfb4e08ed1ee74b3ab8479edac045e2cff01a108d04914ac7ebfec",
+   "packet_path": "handoffs/F21/gha-8916961a-final/gum-extended-mathematical-references/gum-profiles-reference.json"
+  }
+ ],
+ "families": {
+  "exact_unit_conversions": {
+   "status": "qualified",
+   "file": "unitsml-quantities.json",
+   "kind": "convert"
+  },
+  "dimensions": {
+   "status": "qualified",
+   "file": "unitsml-quantities.json",
+   "kind": "dimension"
+  },
+  "kV_A_power_class": {
+   "status": "qualified in unitsml quantity algebra",
+   "plurimath_R-C1_evaluator_path": "missing evidence",
+   "ids": [
+    "kva-product",
+    "conv-kva-to-w",
+    "conv-kva-to-kw",
+    "conv-w-to-kva",
+    "dim-kVxA"
+   ]
+  },
+  "unitsml_typed_refusals": {
+   "status": "qualified",
+   "file": "unitsml-quantities.json",
+   "kind": "refusal"
+  },
+  "gum_mcm_profiles": {
+   "status": "archived exact-head",
+   "file": "gum-mcm-profiles.json",
+   "counts": {
+    "H1": 2,
+    "extended": 11
+   }
+  },
+  "gum_h2_raw_and_rounded_profiles": {
+   "status": "missing evidence"
+  },
+  "gum_published_last_digit_gaps": {
+   "status": "missing evidence"
+  },
+  "gum_typed_refusals_adequacy_normality": {
+   "status": "missing evidence: no exact-head vectors in packet"
+  },
+  "series_group_statistics": {
+   "status": "missing evidence: no exact-head vectors; released plurimath 0.11.17 gem lacks the module"
+  },
+  "conformity": {
+   "status": "missing evidence: no exact-head vectors"
+  },
+  "numerical_request_adapter": {
+   "status": "out of scope; not substituted for F40"
+  }
+ },
+ "comparison": {
+  "unitsml-quantities.json": "value.rational exact string equality; unit, dimension_id, dimension_vector and scale exact; refusals match error_class (message informative only)",
+  "gum-mcm-profiles.json": "identical engine.method, generator, numeric_backend and initial_seeds are the replay key; other runtimes compare within result.numerical_tolerance; no cross-runtime bitwise claim is tested here"
+ }
+}
