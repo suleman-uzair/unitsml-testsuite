@@ -43,6 +43,28 @@ implementation:
 * All numeric values are exact decimal strings; replays parse them as
   Rationals and compare exactly.
 
+== corpora/pma
+
+98 parse vectors for pma (dialect P, "plurimath ascii", specified by
+plurimath `docs/pma.adoc`), frozen from plurimath/amath
+`corpora/pma/{accepted,refused}.yml` at amath commit `3cbf3f8d0c78`
+(file checksums recorded in the corpus):
+
+* `expected-parses.json` — two case kinds:
+  ** `accept` (38) — the input parses. `term` is the typed model's bound
+     data with the source texts as written; `model` is the resolved typed
+     model as `{node, fields}` (set fields in declaration order, nil fields
+     left out), with quantity assertions such as `unit(J::energy)` resolved
+     to unitsdb quantity ids (`q:energy`).
+  ** `refuse` (60) — the input is refused with `category` and the position
+     as `byte_offset` (UTF-8 bytes) and `char_offset` (code points). Version
+     1 refuses every form the specification leaves open.
+* `version` stamps the amath version, the pma grammar artifact checksum,
+  and the vector set version.
+* Every row was checked on both amath engines (Ruby and native) before it
+  was written; they agree on every row.
+* There are no render vectors yet: amath parses pma and does not render it.
+
 == Replay contract
 
 A conforming runtime parses each input (`Unitsml.parse` semantics, the
