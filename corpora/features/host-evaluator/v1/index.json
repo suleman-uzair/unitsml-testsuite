@@ -1,0 +1,75 @@
+{
+ "schema": "unitsml-testsuite-host-evaluator-index/1",
+ "card": "F40",
+ "version": 1,
+ "files": {
+  "vectors.json": "c2719fc8f5ba2393292eeef59885f0e046a347f35e8c68e2ec9d09fcb80bb8c3",
+  "schema/host-evaluator-case.schema.json": "3ae792be7a718c509b5cb5eaa4687d1b2f8848ac1feabe50ce67f512699bb2f9"
+ },
+ "payload_seals": {
+  "handoffs/F40/extended-ruby-producer.jsonl": "cd299cdd11c04a7ccddca20089bb3ea704f0206e747b2f73b66e90bbc769075b",
+  "handoffs/F40/extended-ruby-refusals.jsonl": "af893e9449426558c714fcf9c94845c1c9aabbf7aef06807f0f736dc26bc5280",
+  "handoffs/F40/extended-ruby-coverage.jsonl": "5d93719850755ba7b0352644f3667efdb1ff6370929a4593439d639d83311ab7",
+  "handoffs/F40/producer-provenance.json": "79989790ca7bdb589d13cf7606b6012177d106a0465668528ad73e80e362d278",
+  "handoffs/F40/capture-ruby-features.rb": "2e274c7685735f76a17cec52f1c0167291ba95ecbcf6f28954b212897e9c4900",
+  "handoffs/F40/capture-ruby-quantity.rb": "50c38da332e4f044e5474982faef1c94e0bc99812b30ddf8b99e5665bfa03085",
+  "handoffs/F21/h2-publication-boundary.json": "44fe41014167271eaff93e059d7afbbd96ec5cb659cae7569bacd39e1194fdbf"
+ },
+ "fixture_seal": "b7d923873aedf38053b9903e5f40a0a305940ad5db12c83ccbb56e6d04f73ee4",
+ "fixture_seal_method": "sha256 over sorted payload path NUL sha256 LF",
+ "requested_coverage": {
+  "H2 raw paired data": {
+   "families": [
+    "h2_raw_paired_data",
+    "h2_first_approach_raw_inputs"
+   ],
+   "cases": 2
+  },
+  "H2 rounded summary input": {
+   "families": [
+    "h2_first_approach_rounded_summary_inputs"
+   ],
+   "cases": 1
+  },
+  "H2 second output approach": {
+   "families": [
+    "h2_second_output_approach"
+   ],
+   "cases": 1
+  },
+  "conformity": {
+   "families": [
+    "conformity"
+   ],
+   "cases": 17
+  },
+  "grouped/series statistics": {
+   "families": [
+    "grouped_statistics",
+    "series_statistics"
+   ],
+   "cases": 7
+  },
+  "voltage-current conversion": {
+   "families": [
+    "voltage_current_conversion"
+   ],
+   "cases": 1
+  },
+  "GUM model adequacy/refusals": {
+   "families": [
+    "gum_model_adequacy",
+    "gum_components_and_input_validation"
+   ],
+   "cases": 13
+  }
+ },
+ "missing_coverage": {
+  "h2_published_last_digit_agreement": "unresolved by producer: see h2_publication_boundary; needs original unrounded five triples or the source rounding convention",
+  "distinct_named_power_class": "not evidenced: the only row shows kV*A with dimension L2 M T-3 converting to kW; no named power quantity class is asserted",
+  "gum_mcm_rerun": "not rerun here; validate_coverage rows are producer outputs and MCM profiles stay in gum-mcm-profiles.json",
+  "spec_file_digests": "producer-reported only; plurimath spec sources are not in this checkout, so the digests are not re-verified locally",
+  "plurimath_exact_head_source": "producer head 9c90094a is recorded from producer-provenance.json; no plurimath source archive is included"
+ },
+ "replay": "python scripts/host_evaluator_vectors.py check; producer replay: run capture-ruby-*.rb with F40_OUTPUT under the pinned runtime/gems and compare row_sha256"
+}

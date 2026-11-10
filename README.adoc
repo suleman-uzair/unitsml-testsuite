@@ -111,3 +111,18 @@ rspec spec/unitsml/conversion_corpus_spec.rb` (unitsml-ruby) and
 `CONVERSION_CORPUS_DIR=… npm run replay:conversions` (unitsml-ts), the
 same checkouts enforced by CI.
 
+
+=== Host-evaluator vectors (`corpora/features/host-evaluator/v1`)
+
+74 plurimath 0.11.17 evaluator rows (H.2 raw paired data, raw-input and
+rounded-summary first-approach outputs, the second output approach, H.4/H.5
+grouped statistics, series, JCGM 106 conformity, coverage factors, decimal
+output, MCM coverage adequacy and typed refusals) plus one unitsml 0.6.14
+`v*i` kV*A to kW row. `archive/` holds the producer payloads byte-for-byte;
+`vectors.json` splits each row into `input` and `expected` without computing
+anything. The H.2 published last digit is recorded as unresolved, and no
+named power class is asserted from the kW conversion. `index.json` lists
+seals, requested coverage and the coverage that is still missing.
+
+Check: `python scripts/host_evaluator_vectors.py check` (re-verifies seals
+and rebuilds both JSON files from `archive/`, requiring byte equality).

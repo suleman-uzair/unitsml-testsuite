@@ -1,0 +1,46 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "unitsml-testsuite-host-evaluator-case/1",
+ "title": "Host-evaluator vector case (input and expected output kept separate)",
+ "type": "object",
+ "required": ["id", "family", "source", "method", "input", "expected"],
+ "properties": {
+  "id": {"type": "string"},
+  "family": {"type": "string"},
+  "source": {
+   "type": "object",
+   "required": ["payload", "line", "row_sha256", "example"],
+   "properties": {
+    "payload": {"type": "string"},
+    "line": {"type": "integer", "minimum": 1},
+    "row_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "spec": {"type": "string"},
+    "spec_line": {"type": "integer"},
+    "spec_sha256_reported": {"type": ["string", "null"]},
+    "script": {"type": "string"},
+    "standard": {"type": "string"},
+    "example": {"type": "string"}
+   }
+  },
+  "method": {"type": "string"},
+  "input": {"type": "object"},
+  "expected": {
+   "type": "object",
+   "required": ["outcome"],
+   "properties": {
+    "outcome": {"enum": ["ok", "error"]},
+    "result": {},
+    "error_class": {"type": "string"},
+    "message": {"type": "string"}
+   },
+   "oneOf": [
+    {"properties": {"outcome": {"const": "ok"}}, "required": ["result"]},
+    {"properties": {"outcome": {"const": "error"}}, "required": ["error_class"]}
+   ]
+  },
+  "input_profile": {"enum": ["raw_printed_inputs_u", "rounded_summary_profile_u"]},
+  "publication_boundary": {"type": "object"},
+  "claims": {"type": "object"}
+ },
+ "$comment": "Wire values: {\"rational\":[n,d]}, {\"decimal\":s}, {\"binary64\":hex}, {\"symbol\":s} as written by capture-ruby-features.rb FeatureCapture.wire."
+}

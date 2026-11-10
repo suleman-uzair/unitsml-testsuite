@@ -1,0 +1,59 @@
+{
+  "head": "9c90094a9077c686e0e03d7838eef8531bea8c3c",
+  "runtime": "Ruby 4.0.1",
+  "active_lock_sha256": "fd8082b854c7175de686ab3cb0fc5ec957755404490337a36f4650b038b5b827",
+  "gems": {
+    "plurimath": "0.11.17",
+    "lutaml-model": "0.8.169",
+    "parsanol": "1.3.134-x86_64-linux",
+    "unitsml": "0.6.14"
+  },
+  "probes": {
+    "extended-ruby-producer": {
+      "sha256": "cd299cdd11c04a7ccddca20089bb3ea704f0206e747b2f73b66e90bbc769075b",
+      "rows": 26,
+      "methods": {
+        "conformity": 17,
+        "grouped_type_a": 3,
+        "propagate_vector": 2,
+        "type_a": 1,
+        "type_a_covariance": 3
+      },
+      "specs": {
+        "./spec/plurimath/math/evaluation_annex_h_spec.rb": "6615542c62fde415790cbf1905475bc9aaf1bb9b9b027aac6b312bca9358878f",
+        "./spec/plurimath/math/evaluation_conformity_spec.rb": "437393a20374d228a273d866b03d8520e688cc3ece0ad583d1ab9a0055f89101"
+      },
+      "exit": 0
+    },
+    "extended-ruby-refusals": {
+      "sha256": "af893e9449426558c714fcf9c94845c1c9aabbf7aef06807f0f736dc26bc5280",
+      "rows": 15,
+      "methods": {
+        "component": 7,
+        "series": 4,
+        "type_a": 3,
+        "voltage-times-current": 1
+      },
+      "specs": {
+        "./spec/plurimath/math/evaluation_gum_spec.rb": "cb6fa004c2ff29b6fba52352145c43ae0262cb505f26ba3758c9f2eda3b46cec"
+      },
+      "exit": 0
+    },
+    "extended-ruby-coverage": {
+      "sha256": "5d93719850755ba7b0352644f3667efdb1ff6370929a4593439d639d83311ab7",
+      "rows": 33,
+      "methods": {
+        "coverage": 16,
+        "decimal_output": 13,
+        "decimal_places_output": 1,
+        "validate_coverage": 3
+      },
+      "specs": {
+        "./spec/plurimath/math/evaluation_monte_carlo_spec.rb": "1c0ad029468ca0a6d5d5e383f39655b0ca3b2908ef3f7bd68f8317231c803c78",
+        "./spec/plurimath/math/evaluation_statistics_spec.rb": "ad865ab73815e8657ee3316de56dfb3360ee90d9ea550c5c3f6fdc9eca51f21a"
+      },
+      "exit": 0
+    }
+  },
+  "h2_published_boundary_sha256": "44fe41014167271eaff93e059d7afbbd96ec5cb659cae7569bacd39e1194fdbf"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "JCGM100:2008 TablesH.2/H.3",
+  "raw_printed_inputs_u": [
+    "0.071071407396995939556984440861907715806740939202383440124419917784",
+    "0.29558167735864373839695327911244793722415557050790483290935090145",
+    "0.23633613008237950321222636614164535619828939777232084202189262012"
+  ],
+  "rounded_summary_profile_u": [
+    "0.069978727988371779797477227322718583607961404028427029828159468237",
+    "0.29571682684612360092884792928907230675831681031468988443065006459",
+    "0.23660297183529754670221694033536723651069311478213793011085686997"
+  ],
+  "reported_table_h3_u": [
+    "0.071",
+    "0.295",
+    "0.236"
+  ],
+  "status": "Independent exact-input arithmetic checked; strict last-displayed-digit publication agreement is not established.",
+  "unsupported_assertion": "Raw uX0.295581677... is not within0.0005 of reported0.295; rounded-summary profile does not reproduce all reported u values either.",
+  "required_next_data": "Original unrounded five input triples or the source calculation/rounding convention; do not fit/alter given inputs or weaken the independent high-precision assertions."
+}
