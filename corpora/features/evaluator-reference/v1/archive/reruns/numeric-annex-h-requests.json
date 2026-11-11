@@ -1,0 +1,2760 @@
+{
+ "cases": [
+  {
+   "id": "annex-numeric-1",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "4999"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19661"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "52223"
+       },
+       "right": {
+        "type": "number",
+        "text": "50000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-2",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "4999"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19661"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "52223"
+       },
+       "right": {
+        "type": "number",
+        "text": "50000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-3",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19661"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-4",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "cos",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19661"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-5",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "unary",
+       "operator": "-",
+       "operand": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "cos",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "^",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19661"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "number",
+        "text": "2"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-6",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "unary",
+       "operator": "-",
+       "operand": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "sin",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19661"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-7",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "sin",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19661"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-8",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "unary",
+       "operator": "-",
+       "operand": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "sin",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "^",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19661"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "number",
+        "text": "2"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-9",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "call",
+       "name": "cos",
+       "argument": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "52223"
+        },
+        "right": {
+         "type": "number",
+         "text": "50000"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19661"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-10",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "/",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "number",
+       "text": "19661"
+      },
+      "right": {
+       "type": "number",
+       "text": "1000"
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-11",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "unary",
+      "operator": "-",
+      "operand": {
+       "type": "number",
+       "text": "1000"
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "^",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19661"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "number",
+        "text": "2"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-12",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "number",
+     "text": "0"
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-13",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "5007"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19663"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "1307"
+       },
+       "right": {
+        "type": "number",
+        "text": "1250"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-14",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "5007"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19663"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "1307"
+       },
+       "right": {
+        "type": "number",
+        "text": "1250"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-15",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "5007"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19663"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-16",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "2497"
+        },
+        "right": {
+         "type": "number",
+         "text": "500"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19639"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "5219"
+       },
+       "right": {
+        "type": "number",
+        "text": "5000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-17",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "2497"
+        },
+        "right": {
+         "type": "number",
+         "text": "500"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "19639"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "5219"
+       },
+       "right": {
+        "type": "number",
+        "text": "5000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-18",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "2497"
+       },
+       "right": {
+        "type": "number",
+        "text": "500"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "19639"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-19",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "1001"
+        },
+        "right": {
+         "type": "number",
+         "text": "200"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "491"
+        },
+        "right": {
+         "type": "number",
+         "text": "25"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "2617"
+       },
+       "right": {
+        "type": "number",
+        "text": "2500"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-20",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "1001"
+        },
+        "right": {
+         "type": "number",
+         "text": "200"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "491"
+        },
+        "right": {
+         "type": "number",
+         "text": "25"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "2617"
+       },
+       "right": {
+        "type": "number",
+        "text": "2500"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-21",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "1001"
+       },
+       "right": {
+        "type": "number",
+        "text": "200"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "491"
+       },
+       "right": {
+        "type": "number",
+        "text": "25"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-22",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "499"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "3937"
+        },
+        "right": {
+         "type": "number",
+         "text": "200"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "2607"
+       },
+       "right": {
+        "type": "number",
+        "text": "2500"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-23",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "499"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "3937"
+        },
+        "right": {
+         "type": "number",
+         "text": "200"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "2607"
+       },
+       "right": {
+        "type": "number",
+        "text": "2500"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-24",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "499"
+       },
+       "right": {
+        "type": "number",
+        "text": "100"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "3937"
+       },
+       "right": {
+        "type": "number",
+        "text": "200"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-25",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "4999"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "9839"
+        },
+        "right": {
+         "type": "number",
+         "text": "500"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "cos",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "10433"
+       },
+       "right": {
+        "type": "number",
+        "text": "10000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-26",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "number",
+       "text": "1000"
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "4999"
+        },
+        "right": {
+         "type": "number",
+         "text": "1000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "9839"
+        },
+        "right": {
+         "type": "number",
+         "text": "500"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "sin",
+      "argument": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "10433"
+       },
+       "right": {
+        "type": "number",
+        "text": "10000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-27",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "number",
+      "text": "1000"
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "4999"
+       },
+       "right": {
+        "type": "number",
+        "text": "1000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "9839"
+       },
+       "right": {
+        "type": "number",
+        "text": "500"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-28",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "41432"
+       },
+       "right": {
+        "type": "number",
+        "text": "4054"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "36737"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-29",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "15380"
+       },
+       "right": {
+        "type": "number",
+        "text": "4054"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "12187"
+        },
+        "right": {
+         "type": "number",
+         "text": "50"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-30",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "38706"
+       },
+       "right": {
+        "type": "number",
+        "text": "3922"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "55383"
+        },
+        "right": {
+         "type": "number",
+         "text": "50"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-31",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "14978"
+       },
+       "right": {
+        "type": "number",
+        "text": "3922"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "98453"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-32",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "35860"
+       },
+       "right": {
+        "type": "number",
+        "text": "4200"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "184699"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-33",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "14394"
+       },
+       "right": {
+        "type": "number",
+        "text": "4200"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "172387"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-34",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "32238"
+       },
+       "right": {
+        "type": "number",
+        "text": "3830"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "64657"
+        },
+        "right": {
+         "type": "number",
+         "text": "25"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-35",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "13254"
+       },
+       "right": {
+        "type": "number",
+        "text": "3830"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "246317"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-36",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "29640"
+       },
+       "right": {
+        "type": "number",
+        "text": "3956"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "83517"
+        },
+        "right": {
+         "type": "number",
+         "text": "25"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-37",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "12516"
+       },
+       "right": {
+        "type": "number",
+        "text": "3956"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "80439"
+        },
+        "right": {
+         "type": "number",
+         "text": "25"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-38",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "26356"
+       },
+       "right": {
+        "type": "number",
+        "text": "3980"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "203997"
+        },
+        "right": {
+         "type": "number",
+         "text": "50"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-39",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "-",
+       "left": {
+        "type": "number",
+        "text": "11058"
+       },
+       "right": {
+        "type": "number",
+        "text": "3980"
+       }
+      },
+      "right": {
+       "type": "number",
+       "text": "60"
+      }
+     },
+     "right": {
+      "type": "call",
+      "name": "exp",
+      "argument": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "62947"
+        },
+        "right": {
+         "type": "number",
+         "text": "500000000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "395683"
+        },
+        "right": {
+         "type": "number",
+         "text": "100"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-40",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "171"
+       },
+       "right": {
+        "type": "number",
+        "text": "1250"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "3137"
+        },
+        "right": {
+         "type": "number",
+         "text": "625"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "50571"
+        },
+        "right": {
+         "type": "number",
+         "text": "10000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "130520135939832147823055932744922790770528751365891072113277588422222222248842269897836662598334175891571777830270418684746501536727"
+       },
+       "right": {
+        "type": "number",
+        "text": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+       },
+       "right": {
+        "type": "number",
+        "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-41",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "3137"
+       },
+       "right": {
+        "type": "number",
+        "text": "625"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "50571"
+       },
+       "right": {
+        "type": "number",
+        "text": "10000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "130520135939832147823055932744922790770528751365891072113277588422222222248842269897836662598334175891571777830270418684746501536727"
+       },
+       "right": {
+        "type": "number",
+        "text": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+       },
+       "right": {
+        "type": "number",
+        "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-42",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "171"
+       },
+       "right": {
+        "type": "number",
+        "text": "1250"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "50571"
+       },
+       "right": {
+        "type": "number",
+        "text": "10000"
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "130520135939832147823055932744922790770528751365891072113277588422222222248842269897836662598334175891571777830270418684746501536727"
+       },
+       "right": {
+        "type": "number",
+        "text": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+       },
+       "right": {
+        "type": "number",
+        "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-43",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "unary",
+       "operator": "-",
+       "operand": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "171"
+        },
+        "right": {
+         "type": "number",
+         "text": "1250"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "3137"
+        },
+        "right": {
+         "type": "number",
+         "text": "625"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "^",
+        "left": {
+         "type": "binary",
+         "operator": "/",
+         "left": {
+          "type": "number",
+          "text": "50571"
+         },
+         "right": {
+          "type": "number",
+          "text": "10000"
+         }
+        },
+        "right": {
+         "type": "number",
+         "text": "2"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "130520135939832147823055932744922790770528751365891072113277588422222222248842269897836662598334175891571777830270418684746501536727"
+       },
+       "right": {
+        "type": "number",
+        "text": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+       },
+       "right": {
+        "type": "number",
+        "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-44",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "number",
+       "text": "171"
+      },
+      "right": {
+       "type": "number",
+       "text": "1250"
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "3137"
+       },
+       "right": {
+        "type": "number",
+        "text": "625"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "*",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "50571"
+        },
+        "right": {
+         "type": "number",
+         "text": "10000"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+        },
+        "right": {
+         "type": "number",
+         "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  },
+  {
+   "id": "annex-numeric-45",
+   "request": {
+    "schema": "plurimath.evaluate.numeric/1",
+    "ast": {
+     "type": "binary",
+     "operator": "*",
+     "left": {
+      "type": "binary",
+      "operator": "*",
+      "left": {
+       "type": "unary",
+       "operator": "-",
+       "operand": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "171"
+        },
+        "right": {
+         "type": "number",
+         "text": "1250"
+        }
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "3137"
+        },
+        "right": {
+         "type": "number",
+         "text": "625"
+        }
+       },
+       "right": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "50571"
+        },
+        "right": {
+         "type": "number",
+         "text": "10000"
+        }
+       }
+      }
+     },
+     "right": {
+      "type": "binary",
+      "operator": "/",
+      "left": {
+       "type": "binary",
+       "operator": "/",
+       "left": {
+        "type": "number",
+        "text": "130520135939832147823055932744922790770528751365891072113277588422222222248842269897836662598334175891571777830270418684746501536727"
+       },
+       "right": {
+        "type": "number",
+        "text": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+       }
+      },
+      "right": {
+       "type": "binary",
+       "operator": "^",
+       "left": {
+        "type": "binary",
+        "operator": "/",
+        "left": {
+         "type": "number",
+         "text": "15456604995029053304883151708407065144702408116517574713515877150000000027798935642058192734874477588241056709127801419260405429149"
+        },
+        "right": {
+         "type": "number",
+         "text": "75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+       },
+       "right": {
+        "type": "number",
+        "text": "2"
+       }
+      }
+     }
+    },
+    "mode": "strict",
+    "guard_digits": 60
+   }
+  }
+ ]
+}

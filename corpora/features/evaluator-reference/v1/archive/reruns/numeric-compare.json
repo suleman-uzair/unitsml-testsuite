@@ -1,0 +1,34 @@
+{
+ "bignum": {
+  "rerun": 9,
+  "r30_reference": 9,
+  "fixture": 9,
+  "rerun_eq_r30": 9,
+  "rerun_eq_fixture": 9,
+  "diff_ids_fixture": []
+ },
+ "nonfinite": {
+  "rerun": 13,
+  "r30_reference": 13,
+  "fixture": 13,
+  "rerun_eq_r30": 13,
+  "rerun_eq_fixture": 13,
+  "diff_ids_fixture": []
+ },
+ "supplemental": {
+  "rerun": 105,
+  "r30_reference": 105,
+  "fixture": 105,
+  "rerun_eq_r30": 105,
+  "rerun_eq_fixture": 105,
+  "diff_ids_fixture": []
+ },
+ "validation": {
+  "rerun": 3,
+  "r30_reference": 3,
+  "fixture": 3,
+  "rerun_eq_r30": 3,
+  "rerun_eq_fixture": 3,
+  "diff_ids_fixture": []
+ }
+}

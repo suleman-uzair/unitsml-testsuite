@@ -1,0 +1,84 @@
+{
+ "counts": [
+  {
+   "profile": "annex_h_gum",
+   "ruby_source": "gum-annex-methods",
+   "verdict": "agree",
+   "n": 22
+  },
+  {
+   "profile": "conformity",
+   "ruby_source": "gum-conformity(edge)",
+   "verdict": "agree",
+   "n": 8
+  },
+  {
+   "profile": "conformity",
+   "ruby_source": "gum-conformity(fixture)",
+   "verdict": "agree",
+   "n": 17
+  },
+  {
+   "profile": "coverage",
+   "ruby_source": "gum-f40(fixture)",
+   "verdict": "agree",
+   "n": 16
+  },
+  {
+   "profile": "coverage_validation",
+   "ruby_source": "coverage-validation",
+   "verdict": "agree",
+   "n": 49
+  },
+  {
+   "profile": "gum",
+   "ruby_source": "gum-annex(fixture,subset)",
+   "verdict": "agree",
+   "n": 1
+  },
+  {
+   "profile": "gum",
+   "ruby_source": "gum-f40(fixture)",
+   "verdict": "agree",
+   "n": 23
+  },
+  {
+   "profile": "mcm",
+   "ruby_source": "gum-mcm(fixture)",
+   "verdict": "agree",
+   "n": 6
+  },
+  {
+   "profile": "mcm",
+   "ruby_source": "gum-mcm-joint-rational(fixture)",
+   "verdict": "agree",
+   "n": 7
+  },
+  {
+   "profile": "quantity",
+   "ruby_source": null,
+   "verdict": "no-ruby-expectation",
+   "n": 3
+  }
+ ],
+ "non_agree": [
+  {
+   "id": "refusals-14",
+   "profile": "quantity",
+   "family": null,
+   "verdict": "no-ruby-expectation"
+  },
+  {
+   "id": "volts-amperes-to-kilowatts",
+   "profile": "quantity",
+   "family": null,
+   "verdict": "no-ruby-expectation"
+  },
+  {
+   "id": "pinned-asciiunits-syntax-offset",
+   "profile": "quantity",
+   "family": null,
+   "verdict": "no-ruby-expectation"
+  }
+ ]
+}

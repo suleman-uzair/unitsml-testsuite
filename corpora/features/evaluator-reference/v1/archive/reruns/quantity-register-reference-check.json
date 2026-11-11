@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "exact_arithmetic_checks": [
+    {
+      "id": "caller-factor",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-symbol-alias",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-referenced-id",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-last-wins",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-rational-factor",
+      "field": "canonical_magnitude",
+      "exact": "2/3"
+    },
+    {
+      "id": "caller-add",
+      "field": "canonical_magnitude",
+      "exact": "103"
+    },
+    {
+      "id": "caller-add",
+      "field": "magnitude",
+      "exact": "103/50"
+    },
+    {
+      "id": "caller-subtract",
+      "field": "canonical_magnitude",
+      "exact": "97"
+    },
+    {
+      "id": "caller-compound",
+      "field": "canonical_magnitude",
+      "exact": "300"
+    },
+    {
+      "id": "caller-ratio",
+      "field": "canonical_magnitude",
+      "exact": "25"
+    },
+    {
+      "id": "registered-affine-point",
+      "field": "canonical_magnitude",
+      "exact": "5863/20"
+    },
+    {
+      "id": "registered-affine-difference",
+      "field": "canonical_magnitude",
+      "exact": "20"
+    },
+    {
+      "id": "registered-affine-subtraction",
+      "field": "canonical_magnitude",
+      "exact": "5"
+    },
+    {
+      "id": "canonical-tolerance-exact",
+      "field": "canonical_magnitude",
+      "exact": "20000000001/10000000000"
+    },
+    {
+      "id": "register-empty",
+      "field": "canonical_magnitude",
+      "exact": "2"
+    },
+    {
+      "id": "caller-target-only",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-compound-target",
+      "field": "canonical_magnitude",
+      "exact": "100"
+    },
+    {
+      "id": "caller-target-only",
+      "field": "converted.magnitude",
+      "exact": "2"
+    },
+    {
+      "id": "caller-compound-target",
+      "field": "converted.magnitude",
+      "exact": "2"
+    }
+  ],
+  "count": 19,
+  "tolerance": "none; Fraction equality",
+  "conventions": [
+    "Factor50 and1/3 are explicit caller registrations from the published helper source vectors; no normative SI factor for cwt(US) is inferred.",
+    "Interval+interval addition retains existing aligned-display source behavior, without asserting a new physical affine-addition rule."
+  ]
+}

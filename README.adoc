@@ -126,3 +126,24 @@ seals, requested coverage and the coverage that is still missing.
 
 Check: `python scripts/host_evaluator_vectors.py check` (re-verifies seals
 and rebuilds both JSON files from `archive/`, requiring byte equality).
+
+
+=== Evaluator reference wires (`corpora/features/evaluator-reference/v1`)
+
+388 evaluator request/response wires (numeric, quantity and GUM schemas)
+that the native engines are checked against. `archive/` keeps the source
+wire list and every plurimath-rs fixture it was built from byte-for-byte,
+plus Ruby reference re-runs, the scripts and the gem locks used for them.
+`vectors.json` lists each wire with its family, schema, exact or
+approximate precision, seeds, outcome, error code and acceptance status.
+`acceptance.json` gives the evidence for each family.
+
+Acceptance: the 204 numeric wires are byte-equal to a Ruby re-run, and the
+149 GUM wires agree with Ruby re-runs or with the sealed Ruby results they
+were projected from. 3 quantity wires agree with a Ruby probe. The 32
+quantity-register wires are partial: no Ruby caller-register evaluator
+exists, and exact fraction checks cover 16 of them. The H.2 published last
+digit and a named power class stay unresolved, as in `host-evaluator/v1`.
+
+Check: `python scripts/evaluator_reference_vectors.py check` (re-verifies
+seals and rebuilds `vectors.json` from `archive/`, requiring byte equality).

@@ -1,0 +1,8 @@
+# Task-local mirror of handoffs/R31/Gemfile using isolated clones (F40 claude-20261111).
+source "https://rubygems.org"
+gemspec path: "../plurimath-ruby"
+gem "amath", path: "../amath"
+gem "latexmath", path: "../latexmath"
+gem "umath", path: "../umath"
+gem "unitsml", path: "../unitsml-ruby"
+gem "fiddle", "~> 1.1"
