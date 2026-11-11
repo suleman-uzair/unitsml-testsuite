@@ -1,0 +1,13 @@
+{"family":"accuracy_classes","id":"exact-rational","formula":"x*y","inputs":{"x":{"value":{"rational":["5","2"]},"unit":"m"},"y":{"value":3,"unit":"s"}},"outcome":"ok","value":{"rational":["15","2"]},"unit":"m*s","accuracy":{"symbol":"exact"}}
+{"family":"accuracy_classes","id":"limited-float","formula":"x*y","inputs":{"x":{"value":{"binary64":"4004000000000000"},"unit":"m"},"y":{"value":3,"unit":"s"}},"outcome":"ok","value":{"binary64":"401e000000000000"},"unit":"m*s","accuracy":{"symbol":"limited_float"}}
+{"family":"accuracy_classes","id":"limited-decimal","formula":"x*y","inputs":{"x":{"value":{"decimal":"2.5"},"unit":"m"},"y":{"value":3,"unit":"s"}},"outcome":"ok","value":{"decimal":"7.5"},"unit":"m*s","accuracy":{"symbol":"limited_2"}}
+{"family":"accuracy_classes","id":"least-precise-wins-decimal","formula":"x*y","inputs":{"x":{"value":{"decimal":"2.5"},"unit":"m"},"y":{"value":{"decimal":"3.1"},"unit":"s"}},"outcome":"ok","value":{"decimal":"7.75"},"unit":"m*s","accuracy":{"symbol":"limited_2"}}
+{"family":"accuracy_classes","id":"least-precise-wins-float","formula":"x*y","inputs":{"x":{"value":{"decimal":"2.5"},"unit":"m"},"y":{"value":{"binary64":"4008000000000000"},"unit":"s"}},"outcome":"ok","value":{"decimal":"7.5"},"unit":"m*s","accuracy":{"symbol":"limited_float"}}
+{"family":"accuracy_classes","id":"limited-sum-same-unit","formula":"x+y","inputs":{"x":{"value":{"decimal":"1.5"},"unit":"m"},"y":{"value":2,"unit":"m"}},"outcome":"ok","value":{"decimal":"3.5"},"unit":"m","accuracy":{"symbol":"limited_2"}}
+{"family":"unit_text_roundtrip","id":"roundtrip-W/m","input":"W/m","norm_text":"W/m","reparsed_norm_text":"W/m","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-m/s","input":"m/s","norm_text":"m/s","reparsed_norm_text":"m/s","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-km/s","input":"km/s","norm_text":"km/s","reparsed_norm_text":"km/s","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-W*m^(-1)*sr^(-1)","input":"W*m^(-1)*sr^(-1)","norm_text":"W*m^(-1)*sr^(-1)","reparsed_norm_text":"W*m^(-1)*sr^(-1)","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-J*s^(-1)*m^(-1)*s","input":"J*s^(-1)*m^(-1)*s","norm_text":"J*s^(-1)*m^(-1)*s","reparsed_norm_text":"J*s^(-1)*m^(-1)*s","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-W*m^(-1)*s","input":"W*m^(-1)*s","norm_text":"W*m^(-1)*s","reparsed_norm_text":"W*m^(-1)*s","idempotent":true,"outcome":"ok"}
+{"family":"unit_text_roundtrip","id":"roundtrip-W*m^(-1)","input":"W*m^(-1)","norm_text":"W*m^(-1)","reparsed_norm_text":"W*m^(-1)","idempotent":true,"outcome":"ok"}

@@ -147,3 +147,15 @@ digit and a named power class stay unresolved, as in `host-evaluator/v1`.
 
 Check: `python scripts/evaluator_reference_vectors.py check` (re-verifies
 seals and rebuilds `vectors.json` from `archive/`, requiring byte equality).
+
+
+=== Ruby feature additions (`corpora/features/ruby-feature-additions/v1`)
+
+13 Ruby-generated rows for two families the F40 coverage matrix found
+missing. Six rows cover the accuracy classes (`exact`, `limited_float`,
+`limited_<n>`, and the least precise operand winning). Seven rows check
+that a UnitsML unit string survives a parse round trip, using the strings
+from unitsml-ruby's composite spec. The same producer script ran at two
+Ruby heads and the outputs are byte-equal; `index.json` records both heads.
+
+Check: `python scripts/ruby_feature_additions.py check`.
