@@ -1,0 +1,62 @@
+{
+ "schema": "unitsml-testsuite-ruby-unitsml-features-index/1",
+ "card": "F40",
+ "generation": "ruby-unitsml-features/v1",
+ "relationship": "New additive generation; no earlier file changed.",
+ "requirements": {
+  "quantity_kinds": "context/research/WORK-PACKAGES.md:41-42 'data-declared kind compatibility' / 'allowed work/energy versus forbidden same-dimension kinds'",
+  "primary_quantity": "context/research/WORK-PACKAGES.md:41-42 'Select primary quantity via the existing policy, not .first' / 'primary output and data-order independence'",
+  "caller_register": "context/research/WORK-PACKAGES.md:40,42 'validated caller registers for factors/addends' / 'caller registers'"
+ },
+ "data_authority": {
+  "equivalence_class": "unitsdb schemas/quantities-schema.yaml:47-49 (D02 clause)",
+  "primary": "unitsdb schemas/units-schema.yaml:147-149 (D02 clause)",
+  "register_agreement": "unitsml-ruby lib/unitsml/conversion.rb agree! 1e-9 relative tolerance (D02 clause)"
+ },
+ "producer": {
+  "script": "archive/capture-unitsml-features.rb",
+  "unitsml_ruby": "2337a12 on claude/f40-ruby-features-20261111 (base de4f5b9)",
+  "unitsdb_data": "unitsdb gem 2.2.13 bundled data",
+  "runs": [
+   "archive/unitsml-features-2337a12.jsonl",
+   "archive/unitsml-features-2337a12-rerun.jsonl"
+  ],
+  "runtime": "ruby 4.0.1 +PRISM x86_64-linux, TZ=UTC LC_ALL=C.UTF-8",
+  "register_inputs": "request inputs of evaluator-reference/v1 quantity_register cases; native expected wires are not read by the producer"
+ },
+ "counts": {
+  "quantity_kinds": 124,
+  "primary_quantity": 95,
+  "caller_register": 32
+ },
+ "acceptance": "Ruby-generated results (WORK-PACKAGES.md:99 'accepted Ruby-generated results') at one unitsml-ruby head that implements the features; two process runs byte-equal. The features are new at this head, so no second independent Ruby head exists.",
+ "native_comparison": {
+  "report": "handoffs/F40/claude-20261111/ruby-features/register-comparison.json (not part of this generation)",
+  "summary": {
+   "agree": 16,
+   "both-refuse": 11,
+   "DIFFER": 0,
+   "OUTCOME-DIFFERS": 5
+  },
+  "classified_differences": {
+   "caller-referenced-id": "native resolves binding 'cwt (US)' to NISTu203 (UnitsDB symbol 'cwt (UK)', long hundredweight); Ruby resolves it by symbol to NISTu230 'cwt (US)'. Both records share the English name 'hundredweight'. Candidate native identity defect for root.",
+   "register-does-not-persist": "native result wire carries canonical_magnitude and so converts eagerly; Ruby evaluates the bare variable without conversion. Boundary: host result wire.",
+   "register-refusal-too-many": "ResourceLimitError is a host request limit; unitsml-ruby has no entry limit. Boundary: host request layer.",
+   "registered-affine-compound-refusal": "native refuses degC*m eagerly; Ruby refuses only when the composite is converted ('affine unit inside a composite expression'). Boundary: eager vs lazy conversion.",
+   "registered-difference-minus-point-refusal": "Ruby's existing Quantity#- (de4f5b9) accepts difference minus absolute point and types the result as a difference; native raises ScaleOperationError. Pre-existing Ruby semantics, not changed here; owner decision."
+  }
+ },
+ "limits": [
+  "schema/provenance roundtrips not covered (proposal in handoffs/F40/claude-20261111/ruby-features/PROPOSAL.md section 4)",
+  "Render paths still read the first quantity reference: 3 units differ (first_reference_is_primary false); owner decision",
+  "quantity_kinds enumerates dimension NISTd15 only (the dimension the energy class lives in)"
+ ],
+ "files": {
+  "vectors.json": "3aadf68a23261bf159a8344d1095201d38a11d854cb1d685929a536587ee2398"
+ },
+ "archive_seals": {
+  "archive/capture-unitsml-features.rb": "4c40c05ed5c9c39bea21aa7b249d450a7da259f05bbf043c9ec1d498b1bc7464",
+  "archive/unitsml-features-2337a12-rerun.jsonl": "667413e1df51f272c4861c08149291f70f389d7f85c2168999c87a088b9602bc",
+  "archive/unitsml-features-2337a12.jsonl": "667413e1df51f272c4861c08149291f70f389d7f85c2168999c87a088b9602bc"
+ }
+}
