@@ -159,3 +159,23 @@ from unitsml-ruby's composite spec. The same producer script ran at two
 Ruby heads and the outputs are byte-equal; `index.json` records both heads.
 
 Check: `python scripts/ruby_feature_additions.py check`.
+
+
+=== UnitsML Ruby features (`corpora/features/ruby-unitsml-features/v1`)
+
+251 Ruby-generated rows for three F40 families that had no Ruby reference.
+Quantity kinds: every ordered pair of the 11 UnitsDB quantities with
+dimension NISTd15, added with declared kinds. Pairs inside the energy
+equivalence class are allowed and all other pairs are refused; 3 more rows
+cover a kind with the wrong dimension, an unknown kind and an untyped
+operand. Primary quantity: the 95 units with several quantity references,
+each with the primary taken from the `primary` flag under three reference
+orders. Caller register: the 32 register requests from
+`evaluator-reference/v1`, run through unitsml-ruby's validated register.
+
+The producer ran at unitsml-ruby `2337a12`, the first head with these
+features, in two separate processes, and the outputs are byte-equal.
+`index.json` lists the five register cases where the native wires differ,
+with the reason for each.
+
+Check: `python scripts/ruby_unitsml_features.py check`.
