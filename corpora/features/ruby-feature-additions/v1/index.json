@@ -1,0 +1,59 @@
+{
+ "schema": "unitsml-testsuite-ruby-feature-additions-index/1",
+ "card": "F40",
+ "generation": "ruby-feature-additions/v1",
+ "relationship": "New additive generation; no earlier file changed.",
+ "requirements": {
+  "accuracy_classes": "context/research/WORK-PACKAGES.md:70 'all accuracy modes' (#543 exact/limited classes)",
+  "unit_text_roundtrip": "context/research/WORK-PACKAGES.md:42 'exact string ... roundtrips' (strings: unitsml-ruby spec/unitsml/composite_spec.rb expect_round_trip literals)"
+ },
+ "producer": {
+  "script": "archive/capture-f40-additions.rb",
+  "runs": [
+   {
+    "payload": "archive/f40-additions-9c90094.jsonl",
+    "plurimath_ruby": "9c90094a9077c686e0e03d7838eef8531bea8c3c",
+    "unitsml": "0.6.14 gem",
+    "lock": "gem set equal to F40 producer lock fd8082b8"
+   },
+   {
+    "payload": "archive/f40-additions-0a1df68.jsonl",
+    "plurimath_ruby": "0a1df68a5903d43da13b1e1ef85b6c0523feb1b4",
+    "unitsml": "unitsml-ruby de4f5b9de08760ed124e10eb3cf1f5ee0f3450cd"
+   }
+  ],
+  "runtime": "ruby 4.0.1 +PRISM x86_64-linux, TZ=UTC LC_ALL=C.UTF-8"
+ },
+ "acceptance": "Ruby-generated results (WORK-PACKAGES.md:99 category 'accepted Ruby-generated results'); two Ruby heads byte-equal. No independent numerical reference: values are exact rationals or recorded binary64/decimal inputs.",
+ "limits": [
+  "unit_text_roundtrip covers norm_text idempotence of the 7 composite_spec strings only; schema/provenance roundtrips are not covered",
+  "accuracy rows cover exact, limited_float and limited_<n>; numeric-request strict/approximate modes are covered in evaluator-reference/v1"
+ ],
+ "files": {
+  "vectors.json": "23b4c567839c1b7b77ea75ed3740807168f96a7a76638864e85c28781d802513"
+ },
+ "archive_seals": {
+  "archive/capture-f40-additions.rb": "b084ea954d6171ade738eaff1a0cedb253e16f1dd6785b9fdb47bcd29631f45b",
+  "archive/f40-additions-0a1df68.jsonl": "d00edf19556adb9799aac14024dd9640790378fb6750c488afe4d856b5d7ee7d",
+  "archive/f40-additions-9c90094.jsonl": "d00edf19556adb9799aac14024dd9640790378fb6750c488afe4d856b5d7ee7d"
+ },
+ "counts": {
+  "accuracy_classes": 6,
+  "unit_text_roundtrip": 7
+ },
+ "expected_ids": [
+  "exact-rational",
+  "limited-float",
+  "limited-decimal",
+  "least-precise-wins-decimal",
+  "least-precise-wins-float",
+  "limited-sum-same-unit",
+  "roundtrip-W/m",
+  "roundtrip-m/s",
+  "roundtrip-km/s",
+  "roundtrip-W*m^(-1)*sr^(-1)",
+  "roundtrip-J*s^(-1)*m^(-1)*s",
+  "roundtrip-W*m^(-1)*s",
+  "roundtrip-W*m^(-1)"
+ ]
+}
