@@ -17,8 +17,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # the append-only check needs the base revision's history
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -I scripts/check_feature_corpus.py
-      - run: python -I scripts/host_evaluator_vectors.py check
+      - name: Feature corpus seals and counts
+        run: python -I scripts/check_feature_corpus.py
+      - name: Host-evaluator vectors (rederived byte-equal, schema, provenance)
+        run: python -I scripts/host_evaluator_vectors.py check
+      - name: Evaluator reference generation
+        run: python -I scripts/evaluator_reference_vectors.py check
+      - name: Ruby feature additions generation
+        run: python -I scripts/ruby_feature_additions.py check
+      - name: Ruby UnitsML features generation
+        run: python -I scripts/ruby_unitsml_features.py check
+      - name: Frozen corpora are append-only
+        if: github.event_name == 'pull_request'
+        run: python -I scripts/check_append_only.py "origin/${{ github.base_ref }}"
+      - name: Every validator fails on a tampered corpus
+        run: python -I scripts/ci_tamper_selftest.py
