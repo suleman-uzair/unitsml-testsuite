@@ -39,7 +39,7 @@
    "OUTCOME-DIFFERS": 5
   },
   "classified_differences": {
-   "caller-referenced-id": "native resolves binding 'cwt (US)' to NISTu203 (UnitsDB symbol 'cwt (UK)', long hundredweight); Ruby resolves it by symbol to NISTu230 'cwt (US)'. Both records share the English name 'hundredweight'. Candidate native identity defect for root.",
+   "caller-referenced-id": "UnitsDB data defect, not an engine identity defect. Both engines identify the binding 'cwt (US)' as NISTu230. UnitsDB (unitsdb c2c7d18 data/units.yaml) gives NISTu230 ('hundredweight (short, 100 lb)', symbol 'cwt (US)') a power-1, unprefixed root_units link to NISTu203 ('hundredweight (long, 112 lb)', symbol 'cwt (UK)') and no canonical_conversion, which asserts 1 cwt (US) = 1 cwt (UK) although the names give 100/112. unitsml-rs consults caller registrations along the root_units chain, so the NISTu203 entry applies (2 x 50 = 100 kg); unitsml-ruby consults the register only for the directly identified unit and finds no conversion path (ConversionError). Evidence and options: plurimath-org handoffs/F40-native/claude-20261111/decisions/cwt-us-root-units.json (recommended: UnitsDB data correction).",
    "register-does-not-persist": "native result wire carries canonical_magnitude and so converts eagerly; Ruby evaluates the bare variable without conversion. Boundary: host result wire.",
    "register-refusal-too-many": "ResourceLimitError is a host request limit; unitsml-ruby has no entry limit. Boundary: host request layer.",
    "registered-affine-compound-refusal": "native refuses degC*m eagerly; Ruby refuses only when the composite is converted ('affine unit inside a composite expression'). Boundary: eager vs lazy conversion.",
