@@ -1,0 +1,97 @@
+{
+ "schema": "unitsml-testsuite-evaluator-acceptance/1",
+ "card": "F40",
+ "families": {
+  "numeric-v1": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract 09030042 lib/plurimath/evaluation_request.rb (sha256 8daad834...)",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires)"
+  },
+  "numeric-supplemental-v1": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract 09030042 adapter",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires)"
+  },
+  "numeric-validation-v1": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract 09030042 adapter",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires)"
+  },
+  "numeric-bignum-v1": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract 09030042 adapter",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires)"
+  },
+  "numeric-nonfinite-v1": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract 09030042 adapter",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires)"
+  },
+  "numeric-annex-h": {
+   "status": "accepted: Ruby re-run byte-equal",
+   "reference": "request-contract adapter (probes) and plurimath-ruby ede5978 numeric-chain.rb; both 45/45",
+   "evidence": "archive/reruns/numeric-wires-compare.json (204/204 frozen wires byte-equal to Ruby re-run wires); archive/reruns/chain-reference.json"
+  },
+  "coverage-validation": {
+   "status": "accepted: Ruby re-run agrees",
+   "reference": "plurimath-ruby 0a1df68 coverage-reference.rb (TZ=UTC, LC_ALL=C.UTF-8); 48 cases + actual source MCM equal",
+   "evidence": "archive/reruns/gum-wires-compare.json"
+  },
+  "gum-annex-methods": {
+   "status": "accepted: Ruby re-run agrees",
+   "reference": "plurimath-ruby ede5978 annex-reference.rb (17) + numeric-chain.rb gum_cases (5); all 13 source-file digests match R30 source-provenance",
+   "evidence": "archive/reruns/gum-wires-compare.json"
+  },
+  "gum-conformity": {
+   "status": "accepted: Ruby re-run (8 edges @ede5978) + 17 projected from sealed F40 producer rows reproduced byte-identical @9c90094a",
+   "reference": "edge-reference.rb sha 45d35feb; capture-ruby-features.rb sha 2e274c76",
+   "evidence": "archive/reruns/gum-wires-compare.json; archive/reruns/extended-ruby-producer.jsonl"
+  },
+  "gum-f40": {
+   "status": "accepted: projected from sealed F40 producer rows; every sealed row reproduced byte-identical @9c90094a with the producer's exact gem lock",
+   "reference": "capture-ruby-features.rb / capture-ruby-quantity.rb",
+   "evidence": "archive/reruns/gum-wires-compare.json; archive/reruns/extended-ruby-*.jsonl"
+  },
+  "quantity-f40": {
+   "status": "accepted: Ruby probe agrees on converted magnitude, dimensions, accuracy",
+   "reference": "plurimath-ruby 9c90094a evaluate_quantity",
+   "evidence": "archive/reruns/quantity-wires-compare.json"
+  },
+  "R30-wasm-quantity": {
+   "status": "accepted: Ruby probe agrees (1 conversion on observable fields; 1 refusal: both refuse, native code/offset has no Ruby equivalent)",
+   "reference": "plurimath-ruby 9c90094a + unitsml 0.6.14",
+   "evidence": "archive/reruns/quantity-wires-compare.json"
+  },
+  "gum-annex": {
+   "status": "accepted-subset: wire contains every field of the Ruby spec fixture expectation (9c90094a spec fixture digests); not re-run here",
+   "reference": "plurimath-ruby 9c90094a spec/fixtures/evaluation/gum_h1.json",
+   "evidence": "archive/reruns/gum-wires-compare.json"
+  },
+  "gum-mcm": {
+   "status": "accepted: wire carries every Ruby result field of the archived GHA run 42904830789 (plurimath 8916961a) incl. replay key seeds/generator/backend and final_state; MCM not re-run locally",
+   "reference": "corpora/features/archive/gha-42904830789 (existing generation)",
+   "evidence": "archive/reruns/gum-wires-compare.json"
+  },
+  "gum-mcm-joint-rational": {
+   "status": "accepted: wire carries every Ruby result field (incl. final_state, uniform_draws) of ruby ede5978 projection; MCM not re-run locally",
+   "reference": "R30 joint-rational-mcm/project.py over gum-mcm-profiles.json",
+   "evidence": "archive/reruns/gum-wires-compare.json"
+  },
+  "quantity-register": {
+   "status": "partial: native-produced; no Ruby caller-register evaluator exists in unitsml-ruby de4f5b9; independent exact Fraction checks cover 16/32 ids (19 checks) + 3 structural asserts",
+   "reference": "R30 quantity-register/check-reference.py re-run exit 0",
+   "evidence": "archive/reruns/quantity-register-reference-check.json"
+  }
+ },
+ "extra_sources": {
+  "volts-amperes-to-kilowatts": "R30-wasm-quantity",
+  "pinned-asciiunits-syntax-offset": "R30-wasm-quantity"
+ },
+ "not_added": {
+  "producer_rerun_extra_rows": "Re-running the F40 producer emits 37 rows absent from its sealed files (24 producer, 13 refusals); 21 equal rows sealed in a sibling file, 16 are unarchived successful intermediate calls. They are not frozen here: the original curation rule is unrecorded and inventing one is a scope decision."
+ },
+ "unresolved": {
+  "h2_published_last_digit": "Needs the original unrounded H.2 triples or the source rounding convention (JCGM100:2008 H.2/H.3); see existing host-evaluator/v1 missing_coverage. Not guessed.",
+  "named_power_class": "Ruby (unitsml 0.6.14) yields unit kV*A / V*A with dimension L2 M T-3 and converts to kW by dimension only; no quantity class (apparent vs active power) is asserted by any source. Asserting or refusing a class is an owner/spec decision."
+ }
+}

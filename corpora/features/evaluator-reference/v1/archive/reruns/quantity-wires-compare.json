@@ -1,0 +1,21 @@
+{
+ "checked": 3,
+ "agree": 3,
+ "rows": [
+  {
+   "id": "refusals-14",
+   "agree": true,
+   "basis": "converted magnitude, dimensions, accuracy"
+  },
+  {
+   "id": "volts-amperes-to-kilowatts",
+   "agree": true,
+   "basis": "converted magnitude, dimensions, accuracy"
+  },
+  {
+   "id": "pinned-asciiunits-syntax-offset",
+   "agree": true,
+   "basis": "both refuse (Ruby Unitsml::Errors::ParseError; wire UnitSyntaxError with native parser offset, no Ruby equivalent)"
+  }
+ ]
+}

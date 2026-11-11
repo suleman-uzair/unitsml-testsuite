@@ -1,0 +1,226 @@
+PATH
+  remote: ../amath
+  specs:
+    amath (0.1.0)
+      asciiunits (= 0.1.6)
+      lutaml-model (~> 0.8, >= 0.8.162)
+      parsanol (~> 1.3, >= 1.3.134)
+
+PATH
+  remote: ../latexmath
+  specs:
+    latexmath (1.0.0)
+      htmlentities (~> 4.3)
+      lutaml-model (~> 0.8, >= 0.8.162)
+      parsanol (~> 1.3, >= 1.3.134)
+
+PATH
+  remote: ../plurimath-ruby-ede5978
+  specs:
+    plurimath (0.11.17)
+      amath (>= 0.1.0, < 0.3)
+      bigdecimal
+      htmlentities
+      latexmath (~> 1.0)
+      lutaml-model (~> 0.8.155)
+      mml (~> 2.4.2)
+      omml (~> 0.2.5)
+      ostruct
+      ox
+      parsanol (~> 1.3, >= 1.3.116)
+      parslet
+      thor
+      umath (~> 0.1)
+      unitsml (~> 0.6.4)
+
+PATH
+  remote: ../umath
+  specs:
+    umath (0.1.0)
+      lutaml-model (~> 0.8, >= 0.8.162)
+      parsanol (~> 1.3, >= 1.3.134)
+
+PATH
+  remote: ../unitsml-ruby
+  specs:
+    unitsml (0.6.14)
+      asciiunits (~> 0.1)
+      htmlentities
+      lutaml-model (~> 0.8.0)
+      mml (~> 2.4.0)
+      unitsdb (~> 2.2.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciiunits (0.1.6)
+      parsanol (>= 1.3.113)
+    base64 (0.3.0)
+    bcp47_spec (0.2.1)
+    bigdecimal (4.1.3)
+    canon (0.3.123)
+      diff-lcs
+      json
+      leptris (~> 1.9.401)
+      moxml (~> 0.6.2)
+      paint
+      rainbow
+      table_tennis
+      thor (~> 1.4)
+      unicode-name
+      yeptris (~> 0.6.55)
+    concurrent-ruby (1.3.8)
+    csv (3.3.7)
+    diff-lcs (2.0.0)
+    ebnf (2.6.0)
+      base64 (~> 0.2)
+      htmlentities (~> 4.3)
+      rdf (~> 3.3)
+      scanf (~> 1.0)
+      sxp (~> 2.0)
+      unicode-types (~> 1.8)
+    ffi (1.17.4-x86_64-linux-gnu)
+    fiddle (1.1.8)
+    fuzzy_match (2.1.0)
+    htmlentities (4.4.2)
+    json (3.1.0)
+    leptris (1.9.411.0-x86_64-linux)
+      ffi (~> 1.15)
+    link_header (0.0.8)
+    liquid (5.14.0)
+      bigdecimal
+      strscan (>= 3.1.1)
+    logger (1.7.0)
+    lutaml-model (0.8.169)
+      base64 (>= 0.1.1)
+      bigdecimal
+      canon
+      concurrent-ruby
+      liquid (>= 4.0, < 6.0)
+      moxml (~> 0.6.1)
+      ostruct
+      rubyzip (~> 3.7)
+      thor (~> 1.4)
+    matrix (0.4.3)
+    memo_wise (1.13.0)
+    mml (2.4.7)
+      lutaml-model (~> 0.8.155)
+      moxml (~> 0.6.1)
+    moxml (0.6.4)
+    nokogiri (1.19.7-x86_64-linux-gnu)
+      racc (~> 1.4)
+    omml (0.2.11)
+      lutaml-model (~> 0.8.155)
+      moxml (~> 0.6.1)
+    ostruct (0.6.3)
+    ox (2.14.29)
+      bigdecimal (>= 3.0)
+    paint (2.3.0)
+    parsanol (1.3.134-x86_64-linux)
+    parslet (2.0.0)
+    racc (1.8.1)
+    rainbow (3.1.1)
+    rdf (3.3.1)
+      bcp47_spec (~> 0.2)
+      link_header (~> 0.0, >= 0.0.8)
+    rdf-turtle (3.3.0)
+      ebnf (~> 2.4)
+      rdf (~> 3.3)
+    rubyzip (3.7.0)
+    scanf (1.0.0)
+    strscan (3.1.8)
+    sxp (2.0.0)
+      matrix (~> 0.4)
+      rdf (~> 3.3)
+    table_tennis (0.0.7)
+      csv (~> 3.3)
+      ffi (~> 1.17)
+      memo_wise (~> 1.11)
+      paint (~> 2.3)
+      unicode-display_width (~> 3.1)
+    thor (1.5.0)
+    unicode-display_width (3.3.0)
+      unicode-emoji (~> 4.3)
+    unicode-emoji (4.3.0)
+    unicode-name (1.15.1)
+      unicode-types (~> 1.12)
+    unicode-types (1.12.0)
+    unitsdb (2.2.13)
+      fuzzy_match
+      logger
+      lutaml-model (~> 0.8.0)
+      rdf (~> 3.1)
+      rdf-turtle (~> 3.1)
+      rubyzip (~> 3.4)
+      table_tennis (~> 0.0.7)
+      thor (~> 1.0)
+    yeptris (0.6.60.1-x86_64-linux)
+      ffi (~> 1.15)
+
+PLATFORMS
+  x86_64-linux-gnu
+
+DEPENDENCIES
+  amath!
+  fiddle (~> 1.1)
+  latexmath!
+  nokogiri
+  plurimath!
+  umath!
+  unitsml!
+
+CHECKSUMS
+  amath (0.1.0)
+  asciiunits (0.1.6)
+  base64 (0.3.0)
+  bcp47_spec (0.2.1)
+  bigdecimal (4.1.3)
+  canon (0.3.123)
+  concurrent-ruby (1.3.8)
+  csv (3.3.7)
+  diff-lcs (2.0.0)
+  ebnf (2.6.0)
+  ffi (1.17.4-x86_64-linux-gnu)
+  fiddle (1.1.8)
+  fuzzy_match (2.1.0)
+  htmlentities (4.4.2)
+  json (3.1.0)
+  latexmath (1.0.0)
+  leptris (1.9.411.0-x86_64-linux)
+  link_header (0.0.8)
+  liquid (5.14.0)
+  logger (1.7.0)
+  lutaml-model (0.8.169)
+  matrix (0.4.3)
+  memo_wise (1.13.0)
+  mml (2.4.7)
+  moxml (0.6.4)
+  nokogiri (1.19.7-x86_64-linux-gnu)
+  omml (0.2.11)
+  ostruct (0.6.3)
+  ox (2.14.29)
+  paint (2.3.0)
+  parsanol (1.3.134-x86_64-linux)
+  parslet (2.0.0)
+  plurimath (0.11.17)
+  racc (1.8.1)
+  rainbow (3.1.1)
+  rdf (3.3.1)
+  rdf-turtle (3.3.0)
+  rubyzip (3.7.0)
+  scanf (1.0.0)
+  strscan (3.1.8)
+  sxp (2.0.0)
+  table_tennis (0.0.7)
+  thor (1.5.0)
+  umath (0.1.0)
+  unicode-display_width (3.3.0)
+  unicode-emoji (4.3.0)
+  unicode-name (1.15.1)
+  unicode-types (1.12.0)
+  unitsdb (2.2.13)
+  unitsml (0.6.14)
+  yeptris (0.6.60.1-x86_64-linux)
+
+BUNDLED WITH
+  4.0.3

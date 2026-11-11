@@ -1,0 +1,40 @@
+[
+  {
+    "id": "refusals-14",
+    "ok": true,
+    "magnitude": "6/1",
+    "unit": "kV*A",
+    "dimensions": {
+      "Length": 2,
+      "Mass": 1,
+      "Time": -3
+    },
+    "accuracy": "exact",
+    "converted": {
+      "magnitude": "6/1",
+      "unit": "kW"
+    }
+  },
+  {
+    "id": "volts-amperes-to-kilowatts",
+    "ok": true,
+    "magnitude": "6000/1",
+    "unit": "V*A",
+    "dimensions": {
+      "Length": 2,
+      "Mass": 1,
+      "Time": -3
+    },
+    "accuracy": "exact",
+    "converted": {
+      "magnitude": "6/1",
+      "unit": "kW"
+    }
+  },
+  {
+    "id": "pinned-asciiunits-syntax-offset",
+    "ok": false,
+    "error_class": "Unitsml::Errors::ParseError",
+    "message": "[unitsml] Error: cannot parse \"m^^2\" as a UnitsML expression."
+  }
+]

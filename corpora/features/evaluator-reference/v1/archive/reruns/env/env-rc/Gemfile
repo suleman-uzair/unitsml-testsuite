@@ -1,0 +1,5 @@
+# Task-local reference env (F40 claude-20261111): plurimath gemspec deps only, resolved from installed gems.
+source "https://rubygems.org"
+gem "plurimath", path: "../request-contract"
+gem "bigdecimal"
+gem "umath", path: "../umath"
