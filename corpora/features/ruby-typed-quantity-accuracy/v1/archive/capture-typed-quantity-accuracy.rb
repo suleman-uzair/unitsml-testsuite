@@ -61,6 +61,8 @@ def input_wire(value)
 end
 
 def ast(formula)
+  return { "type" => "variable", "name" => formula } if formula.match?(/\A[a-z]+\z/)
+
   op = formula[/[*+\/-]/]
   left, right = formula.split(op)
   { "type" => "binary", "operator" => op,
@@ -137,5 +139,15 @@ row(F, "float-quotient", "x/y", { x: [1.0, "m"], y: [3.0, "s"] }, "")
 row(F, "float-times-decimal", "x*y", { x: [0.1, "m"], y: [BD["3.3"], "s"] }, "mixed Float and BigDecimal")
 row(F, "float-times-rational", "x*y", { x: [0.1, "m"], y: [Rational(1, 3), "s"] }, "mixed Float and Rational")
 row(F, "float-sum-unit-conversion", "x+y", { x: [0.1, "km"], y: [1.0, "m"] }, "right operand converted to km")
+
+# Added after R's 13 source probes (bridge 2026-11-12 20:11 PKT); values are this
+# producer's own captures. Earlier rows above are unchanged.
+row(U, "unused-decimal-binding-single-variable", "x", { x: [2, "m"], unused: [BD["0.01"], "s"] }, "formula is one variable; unused is bound but not used")
+row(U, "unused-float-binding-single-variable", "x", { x: [2, "m"], unused: [0.1, "s"] }, "formula is one variable; unused is bound but not used")
+row(P, "decimal-zero-precision", "x", { x: [BD["0.0"], "m"] }, "zero has precision 0")
+row(P, "decimal-leading-zero-precision", "x*y", { x: [BD["0.01"], "m"], y: [BD["100.0"], "s"] }, "the result re-enters the accuracy combination with its own precision")
+row(P, "decimal-conversion-neighbor", "x+y", { x: [BD["0.1"], "m"], y: [BD["0.2"], "cm"] }, "right operand converted to m")
+row(F, "float-rounding-neighbor", "x*y", { x: [0.1, "m"], y: [0.2, "s"] }, "binary64 product rounding")
+row(F, "float-decimal-neighbor", "x*y", { x: [BD["0.1"], "m"], y: [0.2, "s"] }, "mixed BigDecimal and Float")
 
 ROWS.each { |r| puts JSON.generate(wire(r)) }

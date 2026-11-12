@@ -183,7 +183,7 @@ Check: `python scripts/ruby_unitsml_features.py check`.
 
 === Typed quantity accuracy (`corpora/features/ruby-typed-quantity-accuracy/v1`)
 
-29 Ruby-generated rows that pin the class of each quantity binding value.
+36 Ruby-generated rows that pin the class of each quantity binding value.
 A BigDecimal binding is limited to its precision, a Float binding is
 `limited_float`, and a Rational or a plain String binding is exact. Each row
 has a `plurimath.evaluate.quantity/1` request that keeps the class in the
@@ -194,7 +194,8 @@ the same typed values.
 
 The rows cover the six accuracy rows of `ruby-feature-additions/v1` (same
 ids, same results), String controls with the same digits, unused bindings,
-decimal precision and Float rounding. Each row also records what the Ruby
+decimal precision and Float rounding, plus seven rows added to cover the
+Ruby source probes behind the Rust typed binding support. Each row also records what the Ruby
 request entry point answers for the same request at the producer head.
 
 The producer ran at plurimath-ruby `0a1df68` with unitsml-ruby `de4f5b9` in

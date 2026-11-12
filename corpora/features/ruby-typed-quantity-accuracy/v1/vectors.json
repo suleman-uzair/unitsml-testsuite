@@ -1,6 +1,6 @@
 {
  "schema": "unitsml-testsuite-ruby-typed-quantity-accuracy/1",
- "count": 29,
+ "count": 36,
  "cases": [
   {
    "id": "exact-rational",
@@ -1144,6 +1144,275 @@
     },
     "value_class": "Float",
     "unit": "km",
+    "accuracy": {
+     "symbol": "limited_float"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "unused-decimal-binding-single-variable",
+   "family": "unused_binding_controls",
+   "note": "formula is one variable; unused is bound but not used",
+   "input": {
+    "formula": "x",
+    "inputs": {
+     "x": {
+      "value": 2,
+      "unit": "m"
+     },
+     "unused": {
+      "value": {
+       "decimal": "0.01",
+       "precision": 2,
+       "wire_reparse_precision": 2,
+       "wire_reparse_equal": true
+      },
+      "unit": "s"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"variable\",\"name\":\"x\"},\"bindings\":{\"x\":{\"value\":\"2\",\"unit\":\"m\"},\"unused\":{\"value\":{\"decimal\":\"0.01\"},\"unit\":\"s\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "rational": [
+      "2",
+      "1"
+     ]
+    },
+    "value_class": "Rational",
+    "unit": "m",
+    "accuracy": {
+     "symbol": "limited_2"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "unused-float-binding-single-variable",
+   "family": "unused_binding_controls",
+   "note": "formula is one variable; unused is bound but not used",
+   "input": {
+    "formula": "x",
+    "inputs": {
+     "x": {
+      "value": 2,
+      "unit": "m"
+     },
+     "unused": {
+      "value": {
+       "binary64": "3fb999999999999a"
+      },
+      "unit": "s"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"variable\",\"name\":\"x\"},\"bindings\":{\"x\":{\"value\":\"2\",\"unit\":\"m\"},\"unused\":{\"value\":{\"binary64\":\"3fb999999999999a\"},\"unit\":\"s\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "rational": [
+      "2",
+      "1"
+     ]
+    },
+    "value_class": "Rational",
+    "unit": "m",
+    "accuracy": {
+     "symbol": "limited_float"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "decimal-zero-precision",
+   "family": "decimal_precision_controls",
+   "note": "zero has precision 0",
+   "input": {
+    "formula": "x",
+    "inputs": {
+     "x": {
+      "value": {
+       "decimal": "0.0",
+       "precision": 0,
+       "wire_reparse_precision": 0,
+       "wire_reparse_equal": true
+      },
+      "unit": "m"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"variable\",\"name\":\"x\"},\"bindings\":{\"x\":{\"value\":{\"decimal\":\"0.0\"},\"unit\":\"m\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "decimal": "0.0"
+    },
+    "value_class": "BigDecimal",
+    "unit": "m",
+    "accuracy": {
+     "symbol": "limited_0"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "decimal-leading-zero-precision",
+   "family": "decimal_precision_controls",
+   "note": "the result re-enters the accuracy combination with its own precision",
+   "input": {
+    "formula": "x*y",
+    "inputs": {
+     "x": {
+      "value": {
+       "decimal": "0.01",
+       "precision": 2,
+       "wire_reparse_precision": 2,
+       "wire_reparse_equal": true
+      },
+      "unit": "m"
+     },
+     "y": {
+      "value": {
+       "decimal": "100.0",
+       "precision": 3,
+       "wire_reparse_precision": 3,
+       "wire_reparse_equal": true
+      },
+      "unit": "s"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"binary\",\"operator\":\"*\",\"left\":{\"type\":\"variable\",\"name\":\"x\"},\"right\":{\"type\":\"variable\",\"name\":\"y\"}},\"bindings\":{\"x\":{\"value\":{\"decimal\":\"0.01\"},\"unit\":\"m\"},\"y\":{\"value\":{\"decimal\":\"100.0\"},\"unit\":\"s\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "decimal": "1.0"
+    },
+    "value_class": "BigDecimal",
+    "unit": "m*s",
+    "accuracy": {
+     "symbol": "limited_1"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "decimal-conversion-neighbor",
+   "family": "decimal_precision_controls",
+   "note": "right operand converted to m",
+   "input": {
+    "formula": "x+y",
+    "inputs": {
+     "x": {
+      "value": {
+       "decimal": "0.1",
+       "precision": 1,
+       "wire_reparse_precision": 1,
+       "wire_reparse_equal": true
+      },
+      "unit": "m"
+     },
+     "y": {
+      "value": {
+       "decimal": "0.2",
+       "precision": 1,
+       "wire_reparse_precision": 1,
+       "wire_reparse_equal": true
+      },
+      "unit": "cm"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"binary\",\"operator\":\"+\",\"left\":{\"type\":\"variable\",\"name\":\"x\"},\"right\":{\"type\":\"variable\",\"name\":\"y\"}},\"bindings\":{\"x\":{\"value\":{\"decimal\":\"0.1\"},\"unit\":\"m\"},\"y\":{\"value\":{\"decimal\":\"0.2\"},\"unit\":\"cm\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "decimal": "0.102"
+    },
+    "value_class": "BigDecimal",
+    "unit": "m",
+    "accuracy": {
+     "symbol": "limited_1"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "float-rounding-neighbor",
+   "family": "float_rounding",
+   "note": "binary64 product rounding",
+   "input": {
+    "formula": "x*y",
+    "inputs": {
+     "x": {
+      "value": {
+       "binary64": "3fb999999999999a"
+      },
+      "unit": "m"
+     },
+     "y": {
+      "value": {
+       "binary64": "3fc999999999999a"
+      },
+      "unit": "s"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"binary\",\"operator\":\"*\",\"left\":{\"type\":\"variable\",\"name\":\"x\"},\"right\":{\"type\":\"variable\",\"name\":\"y\"}},\"bindings\":{\"x\":{\"value\":{\"binary64\":\"3fb999999999999a\"},\"unit\":\"m\"},\"y\":{\"value\":{\"binary64\":\"3fc999999999999a\"},\"unit\":\"s\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "binary64": "3f947ae147ae147c"
+    },
+    "value_class": "Float",
+    "unit": "m*s",
+    "accuracy": {
+     "symbol": "limited_float"
+    }
+   },
+   "ruby_wire": "{\"engine\":\"plurimath.quantity/1\",\"error\":{\"code\":\"InvalidRequest\"},\"grammar\":\"plurimath.numeric-ast/1\",\"ok\":false,\"schema\":\"plurimath.evaluate.quantity/1\"}",
+   "comparison": "expected: exact equality of the wire-encoded library result (value class and digits, unit, accuracy symbol); ruby_wire is the verbatim Ruby request response at the producer head"
+  },
+  {
+   "id": "float-decimal-neighbor",
+   "family": "float_rounding",
+   "note": "mixed BigDecimal and Float",
+   "input": {
+    "formula": "x*y",
+    "inputs": {
+     "x": {
+      "value": {
+       "decimal": "0.1",
+       "precision": 1,
+       "wire_reparse_precision": 1,
+       "wire_reparse_equal": true
+      },
+      "unit": "m"
+     },
+     "y": {
+      "value": {
+       "binary64": "3fc999999999999a"
+      },
+      "unit": "s"
+     }
+    }
+   },
+   "request_json": "{\"schema\":\"plurimath.evaluate.quantity/1\",\"ast\":{\"type\":\"binary\",\"operator\":\"*\",\"left\":{\"type\":\"variable\",\"name\":\"x\"},\"right\":{\"type\":\"variable\",\"name\":\"y\"}},\"bindings\":{\"x\":{\"value\":{\"decimal\":\"0.1\"},\"unit\":\"m\"},\"y\":{\"value\":{\"binary64\":\"3fc999999999999a\"},\"unit\":\"s\"}}}",
+   "expected": {
+    "outcome": "ok",
+    "value": {
+     "decimal": "0.02"
+    },
+    "value_class": "BigDecimal",
+    "unit": "m*s",
     "accuracy": {
      "symbol": "limited_float"
     }
