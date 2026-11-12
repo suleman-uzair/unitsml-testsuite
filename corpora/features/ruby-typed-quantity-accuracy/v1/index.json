@@ -1,0 +1,125 @@
+{
+ "schema": "unitsml-testsuite-ruby-typed-quantity-accuracy-index/1",
+ "card": "F40",
+ "generation": "ruby-typed-quantity-accuracy/v1",
+ "relationship": "New additive generation; no earlier file changed. ruby-feature-additions/v1 and evaluator-reference/v1 (including the 660-case numeric profile inputs) are untouched. The six accuracy_classes_typed rows reuse the ids and Ruby values of the ruby-feature-additions/v1 accuracy rows; their library results are identical.",
+ "reason": "A request builder that flattens {decimal: \"2.5\"} into the plain String \"2.5\" turns a limited BigDecimal binding into an exact Rational one. These rows carry the binding class in the request so both classes are pinned.",
+ "binding_value_tags": {
+  "status": "agreed with R on the bridge (Codex 2026-11-12 19:53:15 and 19:53:18 PKT)",
+  "decimal": "{\"decimal\": \"2.5\"} = Ruby BigDecimal, limited_<precision>; text is BigDecimal#to_s(\"F\")",
+  "rational": "{\"rational\": [\"5\", \"2\"]} = Ruby Rational, exact",
+  "binary64": "{\"binary64\": \"4004000000000000\"} = Ruby Float (big-endian IEEE 754 hex), limited_float",
+  "plain_string": "\"2.5\" = exact Rational (Ruby request decoder Rational(text)); Integer bindings are sent as plain Strings"
+ },
+ "producer": {
+  "script": "archive/capture-typed-quantity-accuracy.rb",
+  "runs": [
+   {
+    "payload": "archive/typed-quantity-accuracy-0a1df68.jsonl"
+   },
+   {
+    "payload": "archive/typed-quantity-accuracy-0a1df68-rerun.jsonl"
+   }
+  ],
+  "plurimath_ruby": "0a1df68a5903d43da13b1e1ef85b6c0523feb1b4",
+  "unitsml": "unitsml-ruby de4f5b9de08760ed124e10eb3cf1f5ee0f3450cd",
+  "bigdecimal": "4.1.3",
+  "runtime": "ruby 4.0.1 +PRISM x86_64-linux, TZ=UTC LC_ALL=C.UTF-8, two separate processes, both clean checkouts"
+ },
+ "acceptance": "expected = Ruby library results (Formula#evaluate_quantity with typed Unitsml::Quantity bindings), WORK-PACKAGES.md:99 'accepted Ruby-generated results'. ruby_wire is informational: what Plurimath::EvaluationRequest answers for the same request at the producer head.",
+ "ruby_wire_at_producer_head": {
+  "refused InvalidRequest": [
+   "exact-rational",
+   "float-product-tenth",
+   "float-quotient",
+   "float-sum-tenths",
+   "float-sum-unit-conversion",
+   "float-times-decimal",
+   "float-times-rational",
+   "least-precise-wins-decimal",
+   "least-precise-wins-float",
+   "limited-decimal",
+   "limited-float",
+   "limited-sum-same-unit",
+   "precision-decimal-times-rational",
+   "precision-difference",
+   "precision-integer-decimal",
+   "precision-least-of-two",
+   "precision-quotient",
+   "precision-six-digits",
+   "precision-small-magnitude",
+   "precision-sum-unit-conversion",
+   "precision-trailing-zeros",
+   "unused-decimal-binding",
+   "unused-float-binding",
+   "unused-string-binding"
+  ],
+  "raised NoMethodError": [
+   "string-exact-float-digits",
+   "string-exact-least-precise",
+   "string-exact-product"
+  ],
+  "ok": [
+   "string-exact-sum-same-unit",
+   "string-exact-third"
+  ]
+ },
+ "findings": [
+  "Every bound quantity enters the accuracy combination, used or not (unused-decimal-binding: exact 15/2 result labelled limited_2).",
+  "Mixed Float and BigDecimal operands give a BigDecimal value labelled limited_float (least-precise-wins-float, float-times-decimal); the value class is recorded per row and is not retagged.",
+  "BigDecimal#precision counts significant digits: 2.50 and 2.500 give 2, 1200 gives 4, 0.000125 gives 3 digits but precision 6, 2.0 and 0.5 give 1.",
+  "The Ruby request entry point at 0a1df68 rejects typed binding values with InvalidRequest (it accepts only plain Strings), so the typed tags are an additive request extension.",
+  "The Ruby request entry point at 0a1df68 raises NoMethodError in Unitsml::Utility.dim_id for String-control products whose unit (m*s) has no UnitsDB dimension id; the library result for the same inputs is ok."
+ ],
+ "limits": [
+  "Expected values come from one Ruby head (0a1df68 + unitsml-ruby de4f5b9), run twice; no independent numerical reference.",
+  "Decimal division and decimal-times-rational digits (precision-quotient, precision-decimal-times-rational) are Ruby BigDecimal rounding at default limits, recorded as produced."
+ ],
+ "files": {
+  "vectors.json": "ecc45b41b9755cd95d7f90973c0d54ff8515dc69fb42c69c3b8b2ce3e52cc226"
+ },
+ "archive_seals": {
+  "archive/capture-typed-quantity-accuracy.rb": "2b2f3520abd9f9c614ce2e6f0374131fde60073973909ad4bce7bed5980c93c9",
+  "archive/typed-quantity-accuracy-0a1df68.jsonl": "847c8e85a1c47b546788ddfe24b1ef387a5a15645fa19b4cb9eb59c13266c1af",
+  "archive/typed-quantity-accuracy-0a1df68-rerun.jsonl": "847c8e85a1c47b546788ddfe24b1ef387a5a15645fa19b4cb9eb59c13266c1af"
+ },
+ "counts": {
+  "accuracy_classes_typed": 6,
+  "string_exact_controls": 5,
+  "unused_binding_controls": 3,
+  "decimal_precision_controls": 9,
+  "float_rounding": 6
+ },
+ "expected_ids": [
+  "exact-rational",
+  "limited-float",
+  "limited-decimal",
+  "least-precise-wins-decimal",
+  "least-precise-wins-float",
+  "limited-sum-same-unit",
+  "string-exact-product",
+  "string-exact-least-precise",
+  "string-exact-sum-same-unit",
+  "string-exact-float-digits",
+  "string-exact-third",
+  "unused-decimal-binding",
+  "unused-float-binding",
+  "unused-string-binding",
+  "precision-trailing-zeros",
+  "precision-six-digits",
+  "precision-least-of-two",
+  "precision-integer-decimal",
+  "precision-small-magnitude",
+  "precision-quotient",
+  "precision-decimal-times-rational",
+  "precision-sum-unit-conversion",
+  "precision-difference",
+  "float-sum-tenths",
+  "float-product-tenth",
+  "float-quotient",
+  "float-times-decimal",
+  "float-times-rational",
+  "float-sum-unit-conversion"
+ ],
+ "replay": "python -I scripts/ruby_typed_quantity_accuracy.py check"
+}
