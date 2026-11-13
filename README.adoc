@@ -222,3 +222,22 @@ collections, and every check passes in both. The producer ran twice per
 profile in separate processes, and the outputs are byte-equal.
 
 Check: `python scripts/unitsdb_schema_roundtrip.py check`.
+
+
+=== Explicit quantity kind on kV*A (`corpora/features/ruby-explicit-kind-power/v1`)
+
+22 Ruby-generated rows that pin what the existing explicit quantity-kind API
+of unitsml-ruby 2ec9583 does with the unit `kV*A`: construction with a
+caller-declared kind (NISTq187 apparent power or NISTq20 power),
+`convert_to("kW")`, typed addition, subtraction and equality of the two kinds,
+and the untyped `kV * A` product with its `primary_kind`. Each row has one
+expected result per UnitsDB profile: the published unitsdb gem 2.2.15 data and
+the merged UnitsDB #143 commit b0b4315. Each snapshot is loaded read-only with
+`Database.from_db`. The two profiles give the same results.
+
+These rows record current API behaviour only. Whether `kV*A` should be typed
+automatically, or whether `convert_to` should refuse a kind that differs from
+the target unit's primary kind, is an open policy question for the data owner
+and is not covered here.
+
+Check: `python scripts/ruby_explicit_kind_power.py check`.
