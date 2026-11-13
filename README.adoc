@@ -202,3 +202,23 @@ The producer ran at plurimath-ruby `0a1df68` with unitsml-ruby `de4f5b9` in
 two separate processes, and the outputs are byte-equal.
 
 Check: `python scripts/ruby_typed_quantity_accuracy.py check`.
+
+
+=== UnitsDB schema roundtrip (`corpora/features/unitsdb-schema-roundtrip/v1`)
+
+Ruby-generated schema and provenance roundtrip results for every UnitsDB
+collection and record. The producer loads each snapshot with the unitsdb
+gem 2.2.15 (under unitsml-ruby 2ec9583) and writes it back with `to_yaml`,
+the same calls the unitsdb-ruby specs make: `Database.from_db(dir)`, each
+collection class `from_yaml(raw)` and each entity class per record. Every
+result is compared with canon's `be_yaml_equivalent_to`, which is the
+unitsdb-ruby contract, and also field by field with value classes, and the
+collection schema is evaluated on input and output. Any mismatch fails the
+row.
+
+There are two profiles: the data bundled in the unitsdb 2.2.15 gem, and
+UnitsDB b0b4315 (the merged #143 data). Each has 897 records in seven
+collections, and every check passes in both. The producer ran twice per
+profile in separate processes, and the outputs are byte-equal.
+
+Check: `python scripts/unitsdb_schema_roundtrip.py check`.
